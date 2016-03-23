@@ -1,0 +1,18 @@
+efault:
+  suites:
+    default:
+      paths:
+        features: 'features'
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+  extensions:
+    Behat\MinkExtension:
+      goutte: ~
+      selenium2: ~
+      base_url: http://127.0.0.1:8888
+    Drupal\DrupalExtension:
+      blackbox: ~
+      drush:
+        alias: self

@@ -1,6 +1,6 @@
 {
-    "name": "drupalcommerce/project-base",
-    "description": "Commerce 2.x project template",
+    "name": "mglaman/drupalcamp-base",
+    "description": "DrupalCamp website project template",
     "type": "project",
     "license": "GPL-2.0+",
     "authors": [
@@ -13,10 +13,6 @@
         {
             "type": "composer",
             "url": "https://packagist.drupal-composer.org"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/drupalcommerce/commerce_base"
         }
     ],
     "require": {
@@ -28,14 +24,20 @@
         "drupal/address": "8.1.x-dev",
         "drupal/entity": "8.1.x-dev",
         "drupal/inline_entity_form": "8.1.x-dev",
+        "drupal/pathauto": "8.1.x-dev",
         "drupal/profile": "8.1.x-dev",
         "drupal/state_machine": "8.1.x-dev",
         "drupal/commerce": "8.2.x-dev",
-        "drupalcommerce/commerce_base": "dev-8.x-1.x"
+        "drupal/layout_plugin": "8.x-1.x-dev",
+        "drupal/page_manager": "^8.1@alpha",
+        "drupal/metatag": "8.x-1.x-dev",
+        "drupal/bootstrap": "~8",
+        "drupal/bootstrap_layouts": "~8",
     },
     "require-dev": {
         "behat/mink": "~1.6",
         "behat/mink-goutte-driver": "~1.2",
+        "drupal/drupal-extension": "~3.0",
         "jcalderonzumba/gastonjs": "^1.1@dev",
         "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
         "mikey179/vfsStream": "~1.2",
