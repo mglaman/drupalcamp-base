@@ -32,7 +32,7 @@
         "drupal/page_manager": "^8.1@alpha",
         "drupal/metatag": "8.x-1.x-dev",
         "drupal/bootstrap": "~8",
-        "drupal/bootstrap_layouts": "~8",
+        "drupal/bootstrap_layouts": "~8"
     },
     "require-dev": {
         "behat/mink": "~1.6",
