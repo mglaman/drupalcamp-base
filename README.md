@@ -1,10 +1,8 @@
-# Commerce 2.x project template
+# DrupalCamps project template [![Build Status](https://travis-ci.org/mglaman/drupalcamp-base.svg?branch=master)](https://travis-ci.org/mglaman/drupalcamp-base)
 
-[![Build Status](https://travis-ci.org/drupalcommerce/project-base.svg?branch=8.x)](https://travis-ci.org/drupalcommerce/project-base)
+Use [Composer](https://getcomposer.org/) to a DrupalCamp project template.
 
-Use [Composer](https://getcomposer.org/) to get Drupal + Commerce 2.x with all dependencies.
-
-Based on [drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project).
+Based on [drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project) and [drupalcommerce/project-base](https://github.com/drupalcommerce/project-base).
 
 ## Usage
 
@@ -17,7 +15,7 @@ for your setup.
 After that you can create the project:
 
 ```
-composer create-project drupalcommerce/project-base some-dir --stability dev --no-interaction
+composer create-project mglaman/drupalcamp-base some-dir --stability dev --no-interaction
 ```
 
 Done! Use `composer require ...` to download additional modules and themes:
@@ -31,6 +29,8 @@ The `composer create-project` command passes ownership of all files to the
 project that is created. You should create a new git repository, and commit
 all files not excluded by the .gitignore file.
 
+@todo: Document local path for profile (see test in `.travis.yml`).
+
 ## What does the template do?
 
 * Drupal is installed in the `web` directory.
@@ -40,6 +40,8 @@ all files not excluded by the .gitignore file.
 * Creates default writable versions of `settings.php` and `services.yml`.
 * Creates the `sites/default/files` directory.
 * Latest version of DrupalConsole is installed locally for use at `vendor/bin/drupal`.
+
+@todo: Support a `settings.local.php`
 
 ## Updating Drupal Core
 
