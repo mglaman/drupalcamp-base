@@ -1,0 +1,7 @@
+{
+    "name": "drupalcamps/testing_camp",
+    "type": "drupal-profile",
+    "description": "DrupalCamps testing installation profile",
+    "homepage": "httsp://github.com/mglaman/drupalcamps-base",
+    "license": "GPL-2.0+"
+}

@@ -1,0 +1,11 @@
+name: Testing Camp
+type: profile
+description: 'A profile for testing on Travis CI'
+version: VERSION
+core: 8.x
+hidden: true
+dependencies:
+  - page_cache
+  - dynamic_page_cache
+themes:
+  - classy
