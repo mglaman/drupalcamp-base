@@ -43,22 +43,19 @@ class ScriptHandler {
 
     // Prepare the settings file for installation
     if (!$fs->exists($root . '/sites/default/settings.php')) {
-      $fs->copy($root . '/sites/default/default.settings.php', $root . '/sites/default/settings.php');
-      $fs->chmod($root . '/sites/default/settings.php', 666);
-      $event->getIO()->write("Create a sites/default/settings.php file with chmod 666");
+      $fs->copy(getcwd() . '/shared/settings.php', $root . '/sites/default/settings.php');
+      $event->getIO()->write("Create a sites/default/settings.php");
+    }
+
+    if (!$fs->exists($root . '/sites/default/settings.local.php')) {
+      $fs->symlink(getcwd() . '/shared/settings.local.php', $root . '/sites/default/settings.local.php');
+      $event->getIO()->write("Create a sites/default/settings.local.php");
     }
 
     // Prepare the services file for installation
     if (!$fs->exists($root . '/sites/default/services.yml')) {
-      $fs->copy($root . '/sites/default/default.services.yml', $root . '/sites/default/services.yml');
-      $fs->chmod($root . '/sites/default/services.yml', 666);
-      $event->getIO()->write("Create a sites/default/services.yml file with chmod 666");
-    }
-
-    // Prepare the files directory for installation
-    if (!$fs->exists($root . '/sites/default/files')) {
-      $fs->chmod($root . '/sites/default/services.yml', 777);
-      $event->getIO()->write("Create a sites/default/files directory with chmod 777");
+      $fs->symlink(getcwd() . '/shared/services.yml', $root . '/sites/default/services.yml');
+      $event->getIO()->write("Create a sites/default/services.yml");
     }
   }
 

@@ -1,0 +1,6 @@
+parameters:
+  twig.config:
+    # Change to `true` to enable Twig debugging.
+    debug: false
+    # Change to `false` to disable caching.
+    cache: true
