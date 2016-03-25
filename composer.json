@@ -78,6 +78,7 @@
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/modules/custom/{$name}": ["type:drupal-module-custom"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"]
         }
