@@ -1,0 +1,7 @@
+{
+    "name": "drupalcamps/conference_sessions",
+    "type": "drupal-module",
+    "description": "DrupalCamps Conference Sessions",
+    "homepage": "httsp://github.com/mglaman/drupalcamps-base",
+    "license": "GPL-2.0+"
+}

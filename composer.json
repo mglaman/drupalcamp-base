@@ -17,6 +17,10 @@
         {
             "type": "path",
             "url": "./tests/testing_camp"
+        },
+        {
+            "type": "path",
+            "url": "./modules/conference_sessions"
         }
     ],
     "require": {

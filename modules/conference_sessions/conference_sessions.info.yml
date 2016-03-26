@@ -1,0 +1,7 @@
+name: Conference Sessions
+description: Provides a session content type, rooms, and scheduling.
+core: 8.x
+type: module
+dependencies:
+  - node
+  - entity

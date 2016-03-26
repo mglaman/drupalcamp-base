@@ -1,0 +1,50 @@
+# Rooms
+entity.sessions_room.collection:
+  path: '/admin/conference/rooms'
+  defaults:
+    _entity_list: 'sessions_room'
+    _title: 'Rooms'
+  requirements:
+    _permission: 'administer rooms'
+
+entity.sessions_room_type.collection:
+  path: '/admin/conference/config/room-types'
+  defaults:
+    _entity_list: 'sessions_room_type'
+    _title: 'Room types'
+  requirements:
+    _permission: 'administer room types'
+
+# Schedule
+entity.sessions_schedule.collection:
+  path: '/admin/conference/schedules'
+  defaults:
+    _entity_list: 'sessions_schedule'
+    _title: 'Schdules'
+  requirements:
+    _permission: 'administer schedules'
+
+entity.sessions_schedule_type.collection:
+  path: '/admin/commerce/config/schedule-types'
+  defaults:
+    _entity_list: 'sessions_schedule_type'
+    _title: 'Schedule types'
+  requirements:
+    _permission: 'administer schedule types'
+
+# Session
+entity.sessions_session.collection:
+  path: '/admin/conference/sessions'
+  defaults:
+    _entity_list: 'sessions_session'
+    _title: 'Sessions'
+  requirements:
+    _permission: 'administer sessions'
+
+entity.sessions_session_type.collection:
+  path: '/admin/commerce/config/session-types'
+  defaults:
+    _entity_list: 'sessions_session_type'
+    _title: 'Session types'
+  requirements:
+    _permission: 'administer session types'
