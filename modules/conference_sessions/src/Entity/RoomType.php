@@ -13,6 +13,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  *   handlers = {
  *     "list_builder" = "Drupal\conference_sessions\RoomTypeListBuilder",
  *     "form" = {
+ *       "default" = "Drupal\conference_sessions\Form\RoomTypeForm",
  *       "add" = "Drupal\conference_sessions\Form\RoomTypeForm",
  *       "edit" = "Drupal\conference_sessions\Form\RoomTypeForm",
  *       "delete" = "Drupal\conference_sessions\Form\RoomTypeDeleteForm"

@@ -13,6 +13,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  *   handlers = {
  *     "list_builder" = "Drupal\conference_sessions\SessionTypeListBuilder",
  *     "form" = {
+ *       "default" = "Drupal\conference_sessions\Form\SessionTypeForm",
  *       "add" = "Drupal\conference_sessions\Form\SessionTypeForm",
  *       "edit" = "Drupal\conference_sessions\Form\SessionTypeForm",
  *       "delete" = "Drupal\conference_sessions\Form\SessionTypeDeleteForm"

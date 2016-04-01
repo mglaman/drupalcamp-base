@@ -24,16 +24,15 @@ entity.sessions_schedule_type.add_form:
   appears_on:
     - entity.sessions_schedule_type.collection
 
-
 # Session
-entity.sessions_schedule.add_page:
-  route_name: entity.sessions_schedule.add_page
-  title: 'Add schedule'
+entity.sessions_session.add_page:
+  route_name: entity.sessions_session.add_page
+  title: 'Add session'
   appears_on:
-    - entity.sessions_schedule.collection
+    - entity.sessions_session.collection
 
-entity.sessions_schedule_type.add_form:
-  route_name: entity.sessions_schedule_type.add_form
-  title: 'Add schedule type'
+entity.sessions_session_type.add_form:
+  route_name: entity.sessions_session_type.add_form
+  title: 'Add session type'
   appears_on:
-    - entity.sessions_schedule_type.collection
+    - entity.sessions_session_type.collection
