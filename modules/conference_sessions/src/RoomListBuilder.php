@@ -26,7 +26,7 @@ class RoomListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /** @var \Drupal\commerce_product\Entity\ProductInterface $entity */
+    /** @var \Drupal\conference_sessions\Entity\RoomTypeInterface $entity */
     $product_type = RoomType::load($entity->bundle());
 
     $row['title']['data'] = [
