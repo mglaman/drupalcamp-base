@@ -1,0 +1,47 @@
+# Room
+entity.sessions_room.canonical:
+  route_name: entity.sessions_room.canonical
+  base_route: entity.sessions_room.canonical
+  title: 'View'
+
+entity.sessions_room.page_edit:
+  route_name: entity.sessions_room.edit_form
+  base_route: entity.sessions_room.canonical
+  title: Edit
+
+entity.sessions_room_type.edit_form:
+  route_name: entity.sessions_room_type.edit_form
+  base_route: entity.sessions_room_type.edit_form
+  title: Edit
+
+# Schedule
+entity.sessions_schedule.canonical:
+  route_name: entity.sessions_schedule.canonical
+  base_route: entity.sessions_schedule.canonical
+  title: 'View'
+
+entity.sessions_schedule.page_edit:
+  route_name: entity.sessions_schedule.edit_form
+  base_route: entity.sessions_schedule.canonical
+  title: Edit
+
+entity.sessions_schedule_type.edit_form:
+  route_name: entity.sessions_schedule_type.edit_form
+  base_route: entity.sessions_schedule_type.edit_form
+  title: Edit
+
+# Session
+entity.sessions_session.canonical:
+  route_name: entity.sessions_session.canonical
+  base_route: entity.sessions_session.canonical
+  title: 'View'
+
+entity.sessions_session.page_edit:
+  route_name: entity.sessions_essione.edit_form
+  base_route: entity.sessions_session.canonical
+  title: Edit
+
+entity.sessions_session_type.edit_form:
+  route_name: entity.sessions_session_type.edit_form
+  base_route: entity.sessions_session_type.edit_form
+  title: Edit

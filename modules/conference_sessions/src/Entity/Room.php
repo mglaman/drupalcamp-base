@@ -112,7 +112,7 @@ class Room extends ContentEntityBase implements RoomInterface {
 
     $fields['title'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Title'))
-      ->setDescription(t('The product title.'))
+      ->setDescription(t('The room title.'))
       ->setRequired(TRUE)
       ->setTranslatable(TRUE)
       ->setSettings([
@@ -132,7 +132,7 @@ class Room extends ContentEntityBase implements RoomInterface {
 
     $fields['path'] = BaseFieldDefinition::create('path')
       ->setLabel(t('URL alias'))
-      ->setDescription(t('The product URL alias.'))
+      ->setDescription(t('The room URL alias.'))
       ->setTranslatable(TRUE)
       ->setDisplayOptions('form', [
         'type' => 'path',
@@ -143,14 +143,14 @@ class Room extends ContentEntityBase implements RoomInterface {
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Published'))
-      ->setDescription(t('Whether the product is published.'))
+      ->setDescription(t('Whether the room is published.'))
       ->setDefaultValue(TRUE)
       ->setTranslatable(TRUE)
       ->setDisplayConfigurable('form', TRUE);
 
     $fields['created'] = BaseFieldDefinition::create('created')
       ->setLabel(t('Created'))
-      ->setDescription(t('The time when the product was created.'))
+      ->setDescription(t('The time when the room was created.'))
       ->setTranslatable(TRUE)
       ->setDisplayConfigurable('view', TRUE)
       ->setDisplayOptions('form', [
@@ -161,7 +161,7 @@ class Room extends ContentEntityBase implements RoomInterface {
 
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
-      ->setDescription(t('The time when the product was last edited.'))
+      ->setDescription(t('The time when the room was last edited.'))
       ->setTranslatable(TRUE);
 
     return $fields;

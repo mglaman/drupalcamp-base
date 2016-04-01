@@ -1,0 +1,39 @@
+conference_sessions.sessions_room_type.*:
+  type: config_entity
+  label: 'Room type'
+  mapping:
+    id:
+      type: string
+      label: 'Type'
+    label:
+      type: label
+      label: 'Label'
+    description:
+      type: text
+      label: 'Description'
+conference_sessions.sessions_schedule_type.*:
+  type: config_entity
+  label: 'Schedule type'
+  mapping:
+    id:
+      type: string
+      label: 'Type'
+    label:
+      type: label
+      label: 'Label'
+    description:
+      type: text
+      label: 'Description'
+conference_sessions.sessions_session_type.*:
+  type: config_entity
+  label: 'Session type'
+  mapping:
+    id:
+      type: string
+      label: 'Type'
+    label:
+      type: label
+      label: 'Label'
+    description:
+      type: text
+      label: 'Description'

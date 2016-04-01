@@ -1,6 +1,23 @@
 <?php
 
 /**
+ * Implements hook_toolbar().
+ */
+function conference_sessions_toolbar() {
+  $items = [];
+  $items['conference'] = [
+    '#type' => 'toolbar_item',
+//    '#attached' => [
+//      'library' => [
+//        'commerce/drupal.commerce.toolbar',
+//      ],
+//    ],
+  ];
+
+  return $items;
+}
+
+/**
  * Implements hook_theme().
  */
 function conference_sessions_theme() {

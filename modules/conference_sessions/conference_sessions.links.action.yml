@@ -1,0 +1,39 @@
+# Room
+entity.sessions_room.add_page:
+  route_name: entity.sessions_room.add_page
+  title: 'Add room'
+  appears_on:
+    - entity.sessions_room.collection
+
+entity.sessions_room_type.add_form:
+  route_name: entity.sessions_room_type.add_form
+  title: 'Add room type'
+  appears_on:
+    - entity.sessions_room_type.collection
+
+# Schedule
+entity.sessions_schedule.add_page:
+  route_name: entity.sessions_schedule.add_page
+  title: 'Add schedule'
+  appears_on:
+    - entity.sessions_schedule.collection
+
+entity.sessions_schedule_type.add_form:
+  route_name: entity.sessions_schedule_type.add_form
+  title: 'Add schedule type'
+  appears_on:
+    - entity.sessions_schedule_type.collection
+
+
+# Session
+entity.sessions_schedule.add_page:
+  route_name: entity.sessions_schedule.add_page
+  title: 'Add schedule'
+  appears_on:
+    - entity.sessions_schedule.collection
+
+entity.sessions_schedule_type.add_form:
+  route_name: entity.sessions_schedule_type.add_form
+  title: 'Add schedule type'
+  appears_on:
+    - entity.sessions_schedule_type.collection

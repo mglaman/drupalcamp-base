@@ -10,7 +10,7 @@ use Drupal\user\UserInterface;
 
 
 /**
- * Defines the product entity class.
+ * Defines the session entity class.
  *
  * @ContentEntityType(
  *   id = "sessions_session",
@@ -144,10 +144,10 @@ class Session extends ContentEntityBase implements SessionInterface {
 
     $fields['uid'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Author'))
-      ->setDescription(t('The product author.'))
+      ->setDescription(t('The session author.'))
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
-      ->setDefaultValueCallback('Drupal\commerce_product\Entity\Product::getCurrentUserId')
+      ->setDefaultValueCallback('Drupal\conference_sessions\Entity\Session::getCurrentUserId')
       ->setTranslatable(TRUE)
       ->setDisplayConfigurable('view', TRUE)
       ->setDisplayOptions('form', [
@@ -158,7 +158,7 @@ class Session extends ContentEntityBase implements SessionInterface {
 
     $fields['title'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Title'))
-      ->setDescription(t('The product title.'))
+      ->setDescription(t('The session title.'))
       ->setRequired(TRUE)
       ->setTranslatable(TRUE)
       ->setSettings([
@@ -178,7 +178,7 @@ class Session extends ContentEntityBase implements SessionInterface {
 
     $fields['path'] = BaseFieldDefinition::create('path')
       ->setLabel(t('URL alias'))
-      ->setDescription(t('The product URL alias.'))
+      ->setDescription(t('The session URL alias.'))
       ->setTranslatable(TRUE)
       ->setDisplayOptions('form', [
         'type' => 'path',
@@ -189,14 +189,14 @@ class Session extends ContentEntityBase implements SessionInterface {
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Published'))
-      ->setDescription(t('Whether the product is published.'))
+      ->setDescription(t('Whether the session is published.'))
       ->setDefaultValue(TRUE)
       ->setTranslatable(TRUE)
       ->setDisplayConfigurable('form', TRUE);
 
     $fields['created'] = BaseFieldDefinition::create('created')
       ->setLabel(t('Created'))
-      ->setDescription(t('The time when the product was created.'))
+      ->setDescription(t('The time when the session was created.'))
       ->setTranslatable(TRUE)
       ->setDisplayConfigurable('view', TRUE)
       ->setDisplayOptions('form', [
@@ -207,7 +207,7 @@ class Session extends ContentEntityBase implements SessionInterface {
 
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
-      ->setDescription(t('The time when the product was last edited.'))
+      ->setDescription(t('The time when the session was last edited.'))
       ->setTranslatable(TRUE);
 
     return $fields;

@@ -113,7 +113,7 @@ class Schedule extends ContentEntityBase implements ScheduleInterface {
 
     $fields['title'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Title'))
-      ->setDescription(t('The product title.'))
+      ->setDescription(t('The schedule title.'))
       ->setRequired(TRUE)
       ->setTranslatable(TRUE)
       ->setSettings([
@@ -133,7 +133,7 @@ class Schedule extends ContentEntityBase implements ScheduleInterface {
 
     $fields['path'] = BaseFieldDefinition::create('path')
       ->setLabel(t('URL alias'))
-      ->setDescription(t('The product URL alias.'))
+      ->setDescription(t('The schedule URL alias.'))
       ->setTranslatable(TRUE)
       ->setDisplayOptions('form', [
         'type' => 'path',
@@ -144,14 +144,14 @@ class Schedule extends ContentEntityBase implements ScheduleInterface {
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Published'))
-      ->setDescription(t('Whether the product is published.'))
+      ->setDescription(t('Whether the schedule is published.'))
       ->setDefaultValue(TRUE)
       ->setTranslatable(TRUE)
       ->setDisplayConfigurable('form', TRUE);
 
     $fields['created'] = BaseFieldDefinition::create('created')
       ->setLabel(t('Created'))
-      ->setDescription(t('The time when the product was created.'))
+      ->setDescription(t('The time when the schedule was created.'))
       ->setTranslatable(TRUE)
       ->setDisplayConfigurable('view', TRUE)
       ->setDisplayOptions('form', [
@@ -162,7 +162,7 @@ class Schedule extends ContentEntityBase implements ScheduleInterface {
 
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
-      ->setDescription(t('The time when the product was last edited.'))
+      ->setDescription(t('The time when the schedule was last edited.'))
       ->setTranslatable(TRUE);
 
     return $fields;
