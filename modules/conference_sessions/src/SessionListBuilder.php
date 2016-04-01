@@ -20,7 +20,8 @@ class SessionListBuilder extends EntityListBuilder {
   public function buildHeader() {
     $header['title'] = t('Title');
     $header['type'] = t('Type');
-    $header['type'] = t('Status');
+    $header['room'] = t('Room');
+    $header['status'] = t('Status');
     return $header + parent::buildHeader();
   }
 
@@ -36,6 +37,7 @@ class SessionListBuilder extends EntityListBuilder {
       '#title' => $entity->label(),
     ] + $entity->toUrl()->toRenderArray();
     $row['type'] = $product_type->label();
+    $row['room'] = $entity->room->entity->label();
     $row['status'] = $entity->isPublished() ? $this->t('Published') : $this->t('Unpublished');
 
     return $row + parent::buildRow($entity);

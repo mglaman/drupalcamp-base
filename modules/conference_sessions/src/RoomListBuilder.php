@@ -18,7 +18,7 @@ class RoomListBuilder extends EntityListBuilder {
   public function buildHeader() {
     $header['title'] = t('Title');
     $header['type'] = t('Type');
-    $header['type'] = t('Status');
+    $header['status'] = t('Status');
     return $header + parent::buildHeader();
   }
 

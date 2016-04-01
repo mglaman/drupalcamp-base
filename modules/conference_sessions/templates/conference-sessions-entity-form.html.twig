@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Two column template for the product add/edit form.
+ * Two column template for the entity add/edit form.
  *
  * Available variables:
  * - form: The form.
@@ -9,14 +9,14 @@
  * @ingroup themeable
  */
 #}
-<div class="layout-product-form clearfix">
-  <div class="layout-region layout-region-product-main">
+<div class="layout-entity-form clearfix">
+  <div class="layout-region layout-region-entity-main">
     {{ form|without('advanced', 'actions') }}
   </div>
-  <div class="layout-region layout-region-product-secondary">
+  <div class="layout-region layout-region-entity-secondary">
     {{ form.advanced }}
   </div>
-  <div class="layout-region layout-region-product-footer">
+  <div class="layout-region layout-region-entity-footer">
     {{ form.actions }}
   </div>
 </div>

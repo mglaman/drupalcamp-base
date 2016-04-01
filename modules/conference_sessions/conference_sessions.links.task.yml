@@ -37,7 +37,7 @@ entity.sessions_session.canonical:
   title: 'View'
 
 entity.sessions_session.page_edit:
-  route_name: entity.sessions_essione.edit_form
+  route_name: entity.sessions_session.edit_form
   base_route: entity.sessions_session.canonical
   title: Edit
 

@@ -6,6 +6,14 @@ conference_sessions.admin_sessions:
   requirements:
     _permission: 'access administration pages'
 
+conference_sessions.admin_sessions_config:
+  path: '/admin/conference/config'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Conference Sessions Config'
+  requirements:
+    _permission: 'access administration pages'
+
 # Rooms
 entity.sessions_room.collection:
   path: '/admin/conference/rooms'

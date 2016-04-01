@@ -210,6 +210,19 @@ class Session extends ContentEntityBase implements SessionInterface {
       ->setDescription(t('The time when the session was last edited.'))
       ->setTranslatable(TRUE);
 
+    $fields['room'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Room'))
+      ->setDescription(t('The session room.'))
+      ->setSetting('target_type', 'sessions_room')
+      ->setSetting('handler', 'default')
+      ->setTranslatable(TRUE)
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDisplayOptions('form', [
+        'type' => 'entity_reference_autocomplete',
+        'weight' => 5,
+      ])
+      ->setDisplayConfigurable('form', TRUE);
+
     return $fields;
   }
 

@@ -4,18 +4,42 @@ conference_sessions.admin_sessions:
   parent: 'system.admin'
   description: 'Administer your conference data and configuration.'
   weight: -9
+conference_sessions.admin_sessions_config:
+  title: 'Configuration'
+  route_name: 'conference_sessions.admin_sessions_config'
+  parent: 'conference_sessions.admin_sessions:'
+  description: 'Configure your conference settings.'
+  weight: 10
+
 entity.sessions_room.collection:
   title: 'Rooms'
   route_name: 'entity.sessions_room.collection'
   parent: 'conference_sessions.admin_sessions'
   description: 'Manage your rooms.'
+entity.sessions_room_type.collection:
+  title: 'Room types'
+  route_name: 'entity.sessions_room_type.collection'
+  parent: 'conference_sessions.admin_sessions_config'
+  description: 'Manage your room types.'
+
 entity.sessions_schedule.collection:
   title: 'Schedules'
   route_name: 'entity.sessions_schedule.collection'
   parent: 'conference_sessions.admin_sessions'
   description: 'Manage your schedules.'
+entity.sessions_schedule_type.collection:
+  title: 'Schedule types'
+  route_name: 'entity.sessions_schedule_type.collection'
+  parent: 'conference_sessions.admin_sessions_config'
+  description: 'Manage your schedule typess.'
+
 entity.sessions_session.collection:
   title: 'Sessions'
   route_name: 'entity.sessions_session.collection'
   parent: 'conference_sessions.admin_sessions'
   description: 'Manage your sessions.'
+entity.sessions_session_type.collection:
+  title: 'Session types'
+  route_name: 'entity.sessions_session_type.collection'
+  parent: 'conference_sessions.admin_sessions_config'
+  description: 'Manage your session types.'

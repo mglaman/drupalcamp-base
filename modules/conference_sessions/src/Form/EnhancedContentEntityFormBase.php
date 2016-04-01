@@ -3,7 +3,9 @@
 namespace Drupal\conference_sessions\Form;
 
 use Drupal\Core\Entity\ContentEntityForm;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\user\EntityOwnerInterface;
 
 abstract class EnhancedContentEntityFormBase extends ContentEntityForm {
   /**
@@ -11,7 +13,7 @@ abstract class EnhancedContentEntityFormBase extends ContentEntityForm {
    */
   public function form(array $form, FormStateInterface $form_state) {
     $entity = $this->entity;
-
+    $form = parent::form($form, $form_state);
     $form['#tree'] = TRUE;
     $form['#theme'] = ['conference_sessions_entity_form'];
     $form['#attached']['library'][] = 'conference_sessions/entity_form';
@@ -36,14 +38,17 @@ abstract class EnhancedContentEntityFormBase extends ContentEntityForm {
         ],
         '#markup' => '<h4 class="label inline">' . $this->t('Last saved') . '</h4> ' . $entity->getChangedTime(),
       ],
-      'author' => [
+    ];
+    if ($this->entity instanceof EntityOwnerInterface) {
+      $form['meta']['author'] = [
         '#type' => 'item',
         '#wrapper_attributes' => [
           'class' => ['author', 'container-inline']
         ],
         '#markup' => '<h4 class="label inline">' . $this->t('Author') . '</h4> ' . $entity->getOwner()->getDisplayName(),
-      ],
-    ];
+      ];
+    }
+
     $form['advanced'] = [
       '#type' => 'container',
       '#attributes' => ['class' => ['entity-meta']],
@@ -105,7 +110,7 @@ abstract class EnhancedContentEntityFormBase extends ContentEntityForm {
    *
    * @param string $entity_type
    *   The entity type.
-   * @param \Drupal\commerce_product\Entity\ProductInterface $product
+   * @param \Drupal\commerce_product\Entity\ProductInterface $entity
    *   The product updated with the submitted values.
    * @param array $form
    *   The complete form array.
@@ -114,10 +119,10 @@ abstract class EnhancedContentEntityFormBase extends ContentEntityForm {
    *
    * @see \Drupal\node\NodeForm::form()
    */
-  public static function updateStatus($entity_type, ProductInterface $product, array $form, FormStateInterface $form_state) {
+  public static function updateStatus($entity_type, EntityInterface $entity, array $form, FormStateInterface $form_state) {
     $element = $form_state->getTriggeringElement();
     if (isset($element['#published_status'])) {
-      $product->setPublished($element['#published_status']);
+      $entity->setPublished($element['#published_status']);
     }
   }
 
