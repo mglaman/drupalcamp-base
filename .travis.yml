@@ -21,12 +21,12 @@ before_install:
   - composer --version
 
 install:
-  - composer --verbose install
+  - composer install
   - composer require drupalcamps/testing_camp
 
 script:
-  - if [[ $RELEASE = dev ]]; then composer --verbose require --no-update drupal/core:8.0.x-dev; fi;
-  - if [[ $RELEASE = dev ]]; then composer --verbose update; fi;
+  - if [[ $RELEASE = dev ]]; then composer require --no-update drupal/core:8.1.x-dev; fi;
+  - if [[ $RELEASE = dev ]]; then composer update; fi;
   - cd $TRAVIS_BUILD_DIR/web
   - ./../vendor/bin/drupal --version
   - ./../vendor/bin/drupal init

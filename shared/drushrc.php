@@ -1,2 +1,2 @@
 <?php
-// $options['uri'] = "http://drupalcamp-base.platform";
+$options['uri'] = "http://drupalcamp-base.platform";
