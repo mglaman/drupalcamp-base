@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6da10108735d8d7ab18efa75a5709609",
-    "content-hash": "609dce201daff09c9077a1c6a04a4b59",
+    "hash": "e7b1aa1f11d94cd042eaff62566e54cf",
+    "content-hash": "5916ad3e2385ddce833f3dd97a3e4639",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -276,12 +276,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/commerceguys/tax.git",
-                "reference": "80ed61b36a16208dd5c5c47f67004299df95b1d1"
+                "reference": "8fce1db0ca9f66991c86498e49c8b36b6c25ff49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/commerceguys/tax/zipball/80ed61b36a16208dd5c5c47f67004299df95b1d1",
-                "reference": "80ed61b36a16208dd5c5c47f67004299df95b1d1",
+                "url": "https://api.github.com/repos/commerceguys/tax/zipball/8fce1db0ca9f66991c86498e49c8b36b6c25ff49",
+                "reference": "8fce1db0ca9f66991c86498e49c8b36b6c25ff49",
                 "shasum": ""
             },
             "require": {
@@ -324,7 +324,7 @@
                 "tax",
                 "vat"
             ],
-            "time": "2016-06-23 13:36:17"
+            "time": "2016-06-23 14:25:10"
         },
         {
             "name": "commerceguys/zone",
@@ -1058,32 +1058,52 @@
         },
         {
             "name": "drupal/address",
-            "version": "dev-8.x-1.x",
+            "version": "dev-1.0.x",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/address.git",
-                "reference": "c7cca660ad0b3626b8b947f9c3811db5e69880ef"
+                "url": "https://git.drupal.org/project/address",
+                "reference": "99d14be6556db06a03959744725190303b068265"
             },
             "require": {
-                "commerceguys/addressing": "dev-master",
-                "commerceguys/intl": "dev-master",
-                "commerceguys/zone": "dev-master",
-                "drupal/core": "8.*",
-                "drupal/field": "8.*"
+                "commerceguys/addressing": "~0.8",
+                "commerceguys/intl": "~0.7",
+                "commerceguys/zone": "~0.7",
+                "drupal/core": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta3+1-dev",
+                    "datestamp": "1466583511"
                 }
             },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0+"
             ],
-            "description": "Provides functionality for handling postal addresses.",
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "googletorp",
+                    "homepage": "https://www.drupal.org/user/386230"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Provides functionality for storing, validating and displaying international postal addresses.",
             "homepage": "http://drupal.org/project/address",
-            "time": "2016-04-14 22:40:07"
+            "support": {
+                "source": "https://www.drupal.org/project/address"
+            },
+            "time": "2016-06-22 08:16:01"
         },
         {
             "name": "drupal/bootstrap",
@@ -1175,7 +1195,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/commerce",
-                "reference": "b8441b52cf76df218e6195604d19b6bac2fc295e"
+                "reference": "2fec0ead4861bda116efb0a644a4c75814887fcd"
             },
             "require": {
                 "commerceguys/intl": "dev-master",
@@ -1201,8 +1221,8 @@
                     "dev-2.0.x": "2.0.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-alpha4+82-dev",
-                    "datestamp": "1466618639"
+                    "version": "8.x-2.0-alpha4+87-dev",
+                    "datestamp": "1466693433"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1232,7 +1252,7 @@
             "support": {
                 "source": "https://www.drupal.org/project/commerce"
             },
-            "time": "2016-06-22 18:09:58"
+            "time": "2016-06-23 14:31:42"
         },
         {
             "name": "drupal/console",
@@ -1325,12 +1345,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-composer/drupal-core.git",
-                "reference": "6c39120335e02ed03f888dd4ca2a3ab456c410e7"
+                "reference": "b889d5ae7e8092acfe4e39b9430f9433d2b78a75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/6c39120335e02ed03f888dd4ca2a3ab456c410e7",
-                "reference": "6c39120335e02ed03f888dd4ca2a3ab456c410e7",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/b889d5ae7e8092acfe4e39b9430f9433d2b78a75",
+                "reference": "b889d5ae7e8092acfe4e39b9430f9433d2b78a75",
                 "shasum": ""
             },
             "require": {
@@ -1487,7 +1507,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2016-06-23 11:00:46"
+            "time": "2016-06-23 13:27:24"
         },
         {
             "name": "drupal/ctools",
@@ -1524,12 +1544,67 @@
             "time": "2016-04-21 02:57:03"
         },
         {
+            "name": "drupal/embed",
+            "version": "dev-1.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/embed",
+                "reference": "d7beee3fe2aa97017803624b7c502410f7b0f47a"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-rc2+1-dev",
+                    "datestamp": "1464333242"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "Devin Carlson",
+                    "homepage": "https://www.drupal.org/user/290182"
+                },
+                {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
+                    "name": "cs_shadow",
+                    "homepage": "https://www.drupal.org/user/2828287"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                }
+            ],
+            "description": "Provide a framework for various different types of embeds in WYSIWYG editors, common functionality, interfaces, and standards.",
+            "homepage": "https://www.drupal.org/project/embed",
+            "support": {
+                "issues": "https://www.drupal.org/project/issues/embed",
+                "irc": "irc://irc.freenode.org/drupal-media"
+            },
+            "time": "2016-05-27 07:14:01"
+        },
+        {
             "name": "drupal/entity",
             "version": "dev-1.0.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/entity",
-                "reference": "68d3116161f41f5be6af9bc943519c499de6983e"
+                "reference": "f12bdcafae712ddf00364e9977014a3aa95eafd6"
             },
             "require": {
                 "drupal/core": "^8.1.0"
@@ -1540,8 +1615,8 @@
                     "dev-1.0.x": "1.0.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha3+1-dev",
-                    "datestamp": "1462379341"
+                    "version": "8.x-1.0-alpha3+2-dev",
+                    "datestamp": "1466693433"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1575,7 +1650,205 @@
             "support": {
                 "source": "https://www.drupal.org/project/entity"
             },
-            "time": "2016-05-04 16:26:48"
+            "time": "2016-06-23 14:20:38"
+        },
+        {
+            "name": "drupal/entity_embed",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/entity_embed",
+                "reference": "8.x-1.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_embed-8.x-1.0-alpha1.zip",
+                "reference": null,
+                "shasum": "20639063a833daca5c394807c029de45bbbf10b4"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/embed": "*"
+            },
+            "suggest": {
+                "drupal/entity_browser": "Required by drupal/entity_embed"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha1",
+                    "datestamp": "1460651755"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "Devin Carlson",
+                    "homepage": "https://www.drupal.org/user/290182"
+                },
+                {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
+                    "name": "cs_shadow",
+                    "homepage": "https://www.drupal.org/user/2828287"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                }
+            ],
+            "description": "Allows any entity to be embedded within a text area using a WYSIWYG editor.",
+            "homepage": "https://www.drupal.org/project/entity_embed",
+            "support": {
+                "issues": "https://www.drupal.org/project/issues/entity_embed",
+                "irc": "irc://irc.freenode.org/drupal-media"
+            }
+        },
+        {
+            "name": "drupal/geocoder",
+            "version": "2.0.0-alpha4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/geocoder",
+                "reference": "8.x-2.0-alpha4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/geocoder-8.x-2.0-alpha4.zip",
+                "reference": null,
+                "shasum": "0e9b5f03fd55cf07c21c29be3fa6a3cb9e6366c6"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "willdurand/geocoder": "^3.3"
+            },
+            "suggest": {
+                "drupal/address": "Required by drupal/geocoder_address",
+                "drupal/drupal": "Required by drupal/geocoder_field",
+                "drupal/geocoder_field": "Required by drupal/geocoder_geofield",
+                "drupal/geofield": "Required by drupal/geocoder_geofield"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.0.x": "2.0.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0-alpha4",
+                    "datestamp": "1464192245"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Brandonian",
+                    "homepage": "https://www.drupal.org/user/77766"
+                },
+                {
+                    "name": "Dean Reilly",
+                    "homepage": "https://www.drupal.org/user/336031"
+                },
+                {
+                    "name": "GJdan",
+                    "homepage": "https://www.drupal.org/user/847848"
+                },
+                {
+                    "name": "Pol",
+                    "homepage": "https://www.drupal.org/user/47194"
+                },
+                {
+                    "name": "Simon Georges",
+                    "homepage": "https://www.drupal.org/user/172312"
+                },
+                {
+                    "name": "indytechcook",
+                    "homepage": "https://www.drupal.org/user/245817"
+                },
+                {
+                    "name": "michaelfavia",
+                    "homepage": "https://www.drupal.org/user/49137"
+                },
+                {
+                    "name": "phayes",
+                    "homepage": "https://www.drupal.org/user/47098"
+                },
+                {
+                    "name": "vidhatanand",
+                    "homepage": "https://www.drupal.org/user/585764"
+                }
+            ],
+            "description": "Provides the geocoder module",
+            "homepage": "https://www.drupal.org/project/geocoder",
+            "support": {
+                "source": "https://www.drupal.org/project/geocoder"
+            }
+        },
+        {
+            "name": "drupal/geofield",
+            "version": "1.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/geofield",
+                "reference": "8.x-1.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/geofield-8.x-1.0-alpha2.zip",
+                "reference": null,
+                "shasum": "312100e9f087c6b178eb971c6a8a70919edff7f0"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "phayes/geophp": "dev-master"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha2",
+                    "datestamp": "1464201846"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Brandon Morrison",
+                    "homepage": "https://www.drupal.org/u/brandonian",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Pablo López",
+                    "homepage": "https://www.drupal.org/u/plopesc",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Stores geographic and location data (points, lines, and polygons).",
+            "homepage": "https://www.drupal.org/project/geofield",
+            "support": {
+                "issues": "https://www.drupal.org/project/issues/geofield",
+                "irc": "irc://irc.freenode.org/drupal-contribute",
+                "source": "http://git.drupal.org/project/geofield.git"
+            }
         },
         {
             "name": "drupal/inline_entity_form",
@@ -1679,6 +1952,232 @@
                 "source": "https://www.drupal.org/project/layout_plugin"
             },
             "time": "2016-05-23 12:23:59"
+        },
+        {
+            "name": "drupal/media_entity",
+            "version": "dev-1.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/media_entity",
+                "reference": "b5643e2c45bcb9ebaa47f7629fa8a13132d634d5"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/entity": "^1.0.0-alpha3"
+            },
+            "suggest": {
+                "drupal/entity": "Required by drupal/media_entity"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1+2-dev",
+                    "datestamp": "1466152139"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
+                    "name": "Drupal media CI",
+                    "homepage": "https://www.drupal.org/user/3057985"
+                },
+                {
+                    "name": "Primsi",
+                    "homepage": "https://www.drupal.org/user/282629"
+                },
+                {
+                    "name": "boztek",
+                    "homepage": "https://www.drupal.org/user/134410"
+                },
+                {
+                    "name": "jcisio",
+                    "homepage": "https://www.drupal.org/user/210762"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                }
+            ],
+            "description": "Media entity API",
+            "homepage": "https://www.drupal.org/project/media_entity",
+            "support": {
+                "source": "https://www.drupal.org/project/media_entity"
+            },
+            "time": "2016-06-17 08:27:30"
+        },
+        {
+            "name": "drupal/media_entity_image",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/media_entity_image",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_entity_image-8.x-1.1.zip",
+                "reference": null,
+                "shasum": "e17026b4cd1a7c92cd3ca6edcd6beb1e71672ce1"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/media_entity": "*"
+            },
+            "suggest": {
+                "drupal/entity_browser": "Required by drupal/media_entity_image"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.1.x": "1.1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1464699543"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
+                    "name": "Primsi",
+                    "homepage": "https://www.drupal.org/user/282629"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                }
+            ],
+            "description": "Media entity local images provider.",
+            "homepage": "https://www.drupal.org/project/media_entity_image",
+            "support": {
+                "source": "https://www.drupal.org/project/media_entity_image"
+            }
+        },
+        {
+            "name": "drupal/media_entity_instagram",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/media_entity_instagram",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_entity_instagram-8.x-1.1.zip",
+                "reference": null,
+                "shasum": "156f84d3577a18194b571773f8d95b0360a1232a"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/media_entity": "*",
+                "php-instagram-api/php-instagram-api": "dev-master"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.1.x": "1.1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1466263340"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
+                    "name": "Primsi",
+                    "homepage": "https://www.drupal.org/user/282629"
+                },
+                {
+                    "name": "designesse",
+                    "homepage": "https://www.drupal.org/user/854012"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                }
+            ],
+            "description": "Provides a media entity instagram.",
+            "homepage": "https://www.drupal.org/project/media_entity_instagram",
+            "support": {
+                "source": "https://www.drupal.org/project/media_entity_instagram"
+            }
+        },
+        {
+            "name": "drupal/media_entity_twitter",
+            "version": "dev-1.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/media_entity_twitter",
+                "reference": "01bf6c78396e33af3c9f68988ec6edbf2ecf35bb"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/media_entity": "*",
+                "j7mbo/twitter-api-php": "dev-master"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0+2-dev",
+                    "datestamp": "1466263340"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
+                    "name": "Primsi",
+                    "homepage": "https://www.drupal.org/user/282629"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                }
+            ],
+            "description": "Media entity Twitter provider.",
+            "homepage": "https://www.drupal.org/project/media_entity_twitter",
+            "support": {
+                "source": "https://www.drupal.org/project/media_entity_twitter"
+            },
+            "time": "2016-06-18 14:57:45"
         },
         {
             "name": "drupal/metatag",
@@ -1819,6 +2318,61 @@
             "time": "2016-06-22 07:22:33"
         },
         {
+            "name": "drupal/profile",
+            "version": "dev-1.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/profile",
+                "reference": "c0c7a4639e023ca241df925f54ffd18ccf7d91b9"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/entity": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha4+8-dev",
+                    "datestamp": "1466582639"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "dakala",
+                    "homepage": "https://www.drupal.org/user/53175"
+                },
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "pcambra",
+                    "homepage": "https://www.drupal.org/user/122101"
+                }
+            ],
+            "description": "Provides configurable user profiles.",
+            "homepage": "http://drupal.org/project/profile",
+            "support": {
+                "source": "https://www.drupal.org/project/profile"
+            },
+            "time": "2016-06-22 08:00:46"
+        },
+        {
             "name": "drupal/token",
             "version": "dev-8.x-1.x",
             "source": {
@@ -1844,12 +2398,124 @@
             "time": "2016-04-08 04:00:58"
         },
         {
-            "name": "drupalcamps/conference_sessions",
-            "version": "dev-conference-sessions-module",
+            "name": "drupalcamps/conference_attendees",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "./modules/conference_sessions/",
-                "reference": "e248f33cf99b392715b088f16dee7712891de18e",
+                "url": "./modules/conference_attendees",
+                "reference": "35643cf6b8a7b2949d7a36ac18446333dfc9595f",
+                "shasum": null
+            },
+            "require": {
+                "drupal/profile": "~1.0"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "DrupalCamps Conference Attendees",
+            "homepage": "https://github.com/mglaman/drupalcamps-base"
+        },
+        {
+            "name": "drupalcamps/conference_content",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./modules/conference_content",
+                "reference": "f0ee41363596c4a257043e7e9b6bc27fc90c4df3",
+                "shasum": null
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "DrupalCamps Conference Content",
+            "homepage": "https://github.com/mglaman/drupalcamps-base"
+        },
+        {
+            "name": "drupalcamps/conference_job_board",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./modules/conference_job_board",
+                "reference": "83d32c8d29d2686b6ab34581c4a40a53dc171408",
+                "shasum": null
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "DrupalCamps Conference Job Board",
+            "homepage": "https://github.com/mglaman/drupalcamps-base"
+        },
+        {
+            "name": "drupalcamps/conference_location",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./modules/conference_location",
+                "reference": "83e4f3e16f63b138fc988d92c2c7b92fdc7fdb9e",
+                "shasum": null
+            },
+            "require": {
+                "drupal/address": "~1.0",
+                "drupal/geocoder": "2.0-alpha4",
+                "drupal/geofield": "1.0-alpha2"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "DrupalCamps Conference Location",
+            "homepage": "https://github.com/mglaman/drupalcamps-base"
+        },
+        {
+            "name": "drupalcamps/conference_media",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./modules/conference_media",
+                "reference": "7d916eb68ae12c6a421beae05aaabb84186bfae7",
+                "shasum": null
+            },
+            "require": {
+                "drupal/embed": "^1.0",
+                "drupal/entity_embed": "1.0-alpha1",
+                "drupal/media_entity": "^1.0",
+                "drupal/media_entity_image": "^1.0",
+                "drupal/media_entity_instagram": "^1.0",
+                "drupal/media_entity_twitter": "^1.0"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "DrupalCamps Conference Media",
+            "homepage": "https://github.com/mglaman/drupalcamps-base"
+        },
+        {
+            "name": "drupalcamps/conference_program",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./modules/conference_program",
+                "reference": "2040f320b04472335829c09e0adb8a3bc676f6aa",
+                "shasum": null
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "DrupalCamps Conference Program",
+            "homepage": "https://github.com/mglaman/drupalcamps-base"
+        },
+        {
+            "name": "drupalcamps/conference_sessions",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./modules/conference_sessions",
+                "reference": "9ead06d307a59bc1da11a41a5a87b25e16723386",
                 "shasum": null
             },
             "type": "drupal-module",
@@ -1857,7 +2523,39 @@
                 "GPL-2.0+"
             ],
             "description": "DrupalCamps Conference Sessions",
-            "homepage": "httsp://github.com/mglaman/drupalcamps-base"
+            "homepage": "https://github.com/mglaman/drupalcamps-base"
+        },
+        {
+            "name": "drupalcamps/conference_sponsors",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./modules/conference_sponsors",
+                "reference": "b7c64f397138d5801cd0556f81c47a67fc39c58f",
+                "shasum": null
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "DrupalCamps Conference Sponsors",
+            "homepage": "https://github.com/mglaman/drupalcamps-base"
+        },
+        {
+            "name": "drupalcamps/conference_ticketing",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./modules/conference_ticketing",
+                "reference": "58551ab99ee1088a7a8773241e261bbd28a20d54",
+                "shasum": null
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "DrupalCamps Conference Ticketing",
+            "homepage": "https://github.com/mglaman/drupalcamps-base"
         },
         {
             "name": "drush/drush",
@@ -2018,6 +2716,92 @@
                 "sparql"
             ],
             "time": "2015-02-27 09:45:49"
+        },
+        {
+            "name": "egeloen/http-adapter",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/egeloen/ivory-http-adapter.git",
+                "reference": "5d5dd5a10cc200bc94de93fe1b281da3c8b5f0f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/egeloen/ivory-http-adapter/zipball/5d5dd5a10cc200bc94de93fe1b281da3c8b5f0f2",
+                "reference": "5d5dd5a10cc200bc94de93fe1b281da3c8b5f0f2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.8",
+                "zendframework/zend-diactoros": "^1.1"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "^3.0.3",
+                "doctrine/cache": "^1.4",
+                "ext-curl": "*",
+                "guzzle/guzzle": "^3.9.4@dev",
+                "guzzlehttp/guzzle": "^4.1.4|^5.0|^6.0",
+                "kriswallsmith/buzz": "^0.13",
+                "nategood/httpful": "^0.2.17",
+                "phpunit/phpunit": "^4.0",
+                "phpunit/phpunit-mock-objects": "dev-matcher-verify as 2.3.x-dev",
+                "psr/log": "^1.0",
+                "react/dns": "^0.4.1",
+                "react/http-client": "^0.4",
+                "rmccue/requests": "dev-master",
+                "satooshi/php-coveralls": "^0.6",
+                "symfony/event-dispatcher": "^2.0|^3.0",
+                "symfony/phpunit-bridge": "^2.7|^3.0",
+                "tedivm/stash": "^0.13",
+                "zendframework/zend-http": "^2.3.4",
+                "zendframework/zendframework1": ">=1.12.9,<=1.12.14|^1.12.16"
+            },
+            "suggest": {
+                "doctrine/cache": "Allows you to use the cache event subscriber",
+                "ext-curl": "Allows you to use the cURL adapter",
+                "ext-http": "Allows you to use the PECL adapter",
+                "guzzle/guzzle": "Allows you to use the Guzzle 3 adapter",
+                "guzzlehttp/guzzle": "Allows you to use the Guzzle 4 adapter",
+                "kriswallsmith/buzz": "Allows you to use the Buzz adapter",
+                "nategood/httpful": "Allows you to use the Httpful adapter",
+                "psr/log": "Allows you to use the logger event subscriber",
+                "rmccue/requests": "Allows you to use the Requests adapter",
+                "symfony/event-dispatcher": "Allows you to use the event lifecycle",
+                "symfony/stopwatch": "Allows you to use the stopwatch http adapter and event subscriber",
+                "tedivm/stash": "Allows you to use the cache event subscriber",
+                "zendframework/zend-http": "Allows you to use the Zend 2 adapter",
+                "zendframework/zendframework1": "Allows you to use the Zend 1 adapter"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ivory\\HttpAdapter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric GELOEN",
+                    "email": "geloen.eric@gmail.com"
+                }
+            ],
+            "description": "Issue HTTP request for PHP 5.3+.",
+            "keywords": [
+                "http",
+                "http-adapter",
+                "http-client",
+                "psr-7"
+            ],
+            "abandoned": "php-http/httplug",
+            "time": "2016-05-06 21:07:48"
         },
         {
             "name": "egulias/email-validator",
@@ -2343,6 +3127,51 @@
             "time": "2015-10-27 09:19:19"
         },
         {
+            "name": "igorw/get-in",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/igorw/get-in.git",
+                "reference": "e2bfd524906ba62fe03a80cd3efd3ec635850a1b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/igorw/get-in/zipball/e2bfd524906ba62fe03a80cd3efd3ec635850a1b",
+                "reference": "e2bfd524906ba62fe03a80cd3efd3ec635850a1b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/get_in.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                }
+            ],
+            "description": "Functions for hash map (assoc array) traversal.",
+            "keywords": [
+                "assoc-array",
+                "hash-map"
+            ],
+            "time": "2015-01-07 21:56:59"
+        },
+        {
             "name": "ircmaxell/password-compat",
             "version": "1.0.x-dev",
             "source": {
@@ -2383,6 +3212,56 @@
                 "password"
             ],
             "time": "2014-11-20 19:18:42"
+        },
+        {
+            "name": "j7mbo/twitter-api-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/J7mbo/twitter-api-php.git",
+                "reference": "a89ce3e294484aad7ae13dbabe45fb3928024ef8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/J7mbo/twitter-api-php/zipball/a89ce3e294484aad7ae13dbabe45fb3928024ef8",
+                "reference": "a89ce3e294484aad7ae13dbabe45fb3928024ef8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.5,>=4.5.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "TwitterAPIExchange.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU Public License"
+            ],
+            "authors": [
+                {
+                    "name": "James Mallison",
+                    "homepage": "https://github.com/j7mbo/twitter-api-php"
+                }
+            ],
+            "description": "Simple PHP Wrapper for Twitter API v1.1 calls",
+            "homepage": "https://github.com/j7mbo/twitter-api-php",
+            "keywords": [
+                "api",
+                "php",
+                "twitter"
+            ],
+            "time": "2015-08-03 21:35:18"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -3012,6 +3891,42 @@
             "time": "2015-02-10 20:07:52"
         },
         {
+            "name": "phayes/geophp",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phayes/geoPHP.git",
+                "reference": "685562416ec6d22b9b3927e02ca0ddacf84ca646"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phayes/geoPHP/zipball/685562416ec6d22b9b3927e02ca0ddacf84ca646",
+                "reference": "685562416ec6d22b9b3927e02ca0ddacf84ca646",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "geoPHP.inc"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2 or New-BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Patrick Hayes"
+                }
+            ],
+            "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
+            "homepage": "https://github.com/phayes/geoPHP",
+            "time": "2016-03-04 05:42:29"
+        },
+        {
             "name": "phing/phing",
             "version": "dev-master",
             "source": {
@@ -3103,6 +4018,48 @@
                 "tool"
             ],
             "time": "2016-06-20 09:00:14"
+        },
+        {
+            "name": "php-instagram-api/php-instagram-api",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/galen/PHP-Instagram-API.git",
+                "reference": "7a796fdae715fcdccc00590933ce482437342c35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/galen/PHP-Instagram-API/zipball/7a796fdae715fcdccc00590933ce482437342c35",
+                "reference": "7a796fdae715fcdccc00590933ce482437342c35",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Instagram": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Galen Grover",
+                    "email": "galenjr@gmail.com",
+                    "homepage": "http://www.galengrover.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP Instagram API for PHP 5.3+",
+            "homepage": "https://github.com/galen/PHP-Instagram-API",
+            "keywords": [
+                "instagram"
+            ],
+            "time": "2013-11-13 23:10:03"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -5047,6 +6004,66 @@
             "time": "2016-06-21 07:05:03"
         },
         {
+            "name": "willdurand/geocoder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geocoder-php/Geocoder.git",
+                "reference": "c2373a6e1fdf0fad899d17022ff10abf6fc635c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/geocoder-php/Geocoder/zipball/c2373a6e1fdf0fad899d17022ff10abf6fc635c1",
+                "reference": "c2373a6e1fdf0fad899d17022ff10abf6fc635c1",
+                "shasum": ""
+            },
+            "require": {
+                "egeloen/http-adapter": "~0.8|~1.0",
+                "igorw/get-in": "~1.0",
+                "php": "^5.4|^7.0"
+            },
+            "require-dev": {
+                "geoip2/geoip2": "~2.0",
+                "symfony/stopwatch": "~2.5"
+            },
+            "suggest": {
+                "ext-geoip": "Enabling the geoip extension allows you to use the MaxMindProvider.",
+                "geoip/geoip": "If you are going to use the MaxMindBinaryProvider (conflict with geoip extension).",
+                "geoip2/geoip2": "If you are going to use the GeoIP2DatabaseProvider.",
+                "symfony/stopwatch": "If you want to use the TimedGeocoder"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Geocoder": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "William Durand",
+                    "email": "william.durand1@gmail.com"
+                }
+            ],
+            "description": "The almost missing Geocoder PHP 5.4 library.",
+            "homepage": "http://geocoder-php.org",
+            "keywords": [
+                "abstraction",
+                "geocoder",
+                "geocoding",
+                "geoip"
+            ],
+            "time": "2016-04-26 11:46:16"
+        },
+        {
             "name": "zendframework/zend-diactoros",
             "version": "dev-develop",
             "source": {
@@ -6749,7 +7766,15 @@
         "drupal/commerce": 20,
         "drupal/entity": 20,
         "drupal/inline_entity_form": 20,
-        "drupalcamps/conference_sessions": 20
+        "drupalcamps/conference_attendees": 20,
+        "drupalcamps/conference_sessions": 20,
+        "drupalcamps/conference_content": 20,
+        "drupalcamps/conference_job_board": 20,
+        "drupalcamps/conference_location": 20,
+        "drupalcamps/conference_media": 20,
+        "drupalcamps/conference_program": 20,
+        "drupalcamps/conference_sponsors": 20,
+        "drupalcamps/conference_ticketing": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

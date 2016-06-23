@@ -1,0 +1,13 @@
+{
+    "name": "drupalcamps/conference_content",
+    "type": "drupal-module",
+    "description": "DrupalCamps Conference Content",
+    "homepage": "https://github.com/mglaman/drupalcamps-base",
+    "license": "GPL-2.0+",
+    "repositories": [
+        {
+            "type": "composer",
+            "url":  "https://packages.drupal.org/8"
+        }
+    ]
+}

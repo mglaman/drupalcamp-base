@@ -1,0 +1,13 @@
+{
+    "name": "drupalcamps/conference_ticketing",
+    "type": "drupal-module",
+    "description": "DrupalCamps Conference Ticketing",
+    "homepage": "https://github.com/mglaman/drupalcamps-base",
+    "license": "GPL-2.0+",
+    "repositories": [
+        {
+            "type": "composer",
+            "url":  "https://packages.drupal.org/8"
+        }
+    ]
+}
