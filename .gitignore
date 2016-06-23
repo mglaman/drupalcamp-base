@@ -6,6 +6,11 @@ web/modules/contrib
 web/themes/contrib
 web/profiles/contrib
 
+# Ignore settings, symlinked on composer update.
+web/sites/default/settings.php
+web/sites/default/settings.local.php
+web/sites/default/drushrc.php
+
 # Ignore Drupal's file directory
 web/sites/default/files
 

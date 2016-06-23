@@ -24,9 +24,9 @@
         }
     ],
     "require": {
-        "composer/installers": "^1.0.23",
-        "drupal-composer/drupal-scaffold": "^2.0.1",
-        "cweagans/composer-patches": "~1.0",
+        "cweagans/composer-patches": "^1.5.0",
+        "composer/installers": "^1.0",
+        "drupal-composer/drupal-scaffold": "^1.2",
         "drush/drush": "8.0.5",
         "drupal/core": "~8.1",
         "drupal/console": "~0.10",
@@ -65,15 +65,18 @@
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "post-install-cmd": [
             "DrupalProject\\composer\\ScriptHandler::buildScaffold",
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "if [ -f shared/settings.php ] ; then cd web/sites/default; rm settings.php; ln -s ../../../shared/settings.php settings.php; fi",
+            "if [ -f shared/settings.local.php ] ; then cd web/sites/default; rm settings.local.php; ln -s ../../../shared/settings.local.php settings.local.php; fi",
+            "if [ -f shared/drushrc.php ] ; then cd web/sites/default; rm drushrc.php; ln -s ../../../shared/drushrc.php drushrc.php; fi",
+            "if [ -a shared/files ] ; then cd web/sites/default; rm files; ln -s ../../../shared/files/ files; fi"
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::buildScaffold",
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "if [ -f shared/settings.php ] ; then cd web/sites/default; rm settings.php; ln -s ../../../local/settings.php settings.php; fi",
-            "if [ -f shared/settings.local.php ] ; then cd web/sites/default; rm settings.local.php; ln -s ../../../local/settings.local.php settings.local.php; fi",
-            "if [ -f shared/drushrc.php ] ; then cd web/sites/default; rm drushrc.php; ln -s ../../../local/drushrc.php drushrc.php; fi",
-            "if [ -a shared/files ] ; then cd web/sites/default; rm files; ln -s ../../../local/files/ files; fi"
+            "if [ -f shared/settings.php ] ; then cd web/sites/default; rm settings.php; ln -s ../../../shared/settings.php settings.php; fi",
+            "if [ -f shared/settings.local.php ] ; then cd web/sites/default; rm settings.local.php; ln -s ../../../shared/settings.local.php settings.local.php; fi",
+            "if [ -f shared/drushrc.php ] ; then cd web/sites/default; rm drushrc.php; ln -s ../../../shared/drushrc.php drushrc.php; fi",
         ]
     },
     "extra": {
