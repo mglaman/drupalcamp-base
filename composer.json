@@ -77,7 +77,6 @@
         "drupal/bootstrap": "~3",
         "drupal/bootstrap_layouts": "~1",
         "drupalcamps/conference_attendees": "dev-master",
-        "drupalcamps/conference_sessions": "dev-master",
         "drupalcamps/conference_content": "dev-master",
         "drupalcamps/conference_job_board": "dev-master",
         "drupalcamps/conference_location": "dev-master",
