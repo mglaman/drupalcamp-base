@@ -17,8 +17,8 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
 // Configuration directories.
 $config_directories = array(
-  CONFIG_STAGING_DIRECTORY => '../../../config/staging',
-  CONFIG_SYNC_DIRECTORY => '../../../config/staging',
+  CONFIG_STAGING_DIRECTORY => '../config/sync',
+  CONFIG_SYNC_DIRECTORY => '../config/sync',
 );
 
 // Database configuration.

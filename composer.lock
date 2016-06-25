@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e7b1aa1f11d94cd042eaff62566e54cf",
-    "content-hash": "5916ad3e2385ddce833f3dd97a3e4639",
+    "hash": "d7f3062448be1460baaef765b9e6543a",
+    "content-hash": "9499d589a81ebd1c1f1654f756423a5c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -379,12 +379,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "5bf0335072c90b0387857bc64dc4c0b9503fa53a"
+                "reference": "3c90d491bafa3d0a1bd57a7d001da839a08d2f88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/5bf0335072c90b0387857bc64dc4c0b9503fa53a",
-                "reference": "5bf0335072c90b0387857bc64dc4c0b9503fa53a",
+                "url": "https://api.github.com/repos/composer/installers/zipball/3c90d491bafa3d0a1bd57a7d001da839a08d2f88",
+                "reference": "3c90d491bafa3d0a1bd57a7d001da839a08d2f88",
                 "shasum": ""
             },
             "require": {
@@ -447,6 +447,7 @@
                 "dokuwiki",
                 "drupal",
                 "elgg",
+                "expressionengine",
                 "fuelphp",
                 "grav",
                 "installer",
@@ -472,7 +473,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-06-22 15:59:10"
+            "time": "2016-06-24 07:03:15"
         },
         {
             "name": "composer/semver",
@@ -1111,7 +1112,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/bootstrap",
-                "reference": "c7e3e019922a9f52fda73f21db42c18a7ad5f7e4"
+                "reference": "1e8ef6e0b0e9efe7697fef26a5abcccfb8b867bc"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1122,8 +1123,8 @@
                     "dev-3.0.x": "3.0.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-beta3+29-dev",
-                    "datestamp": "1466642939"
+                    "version": "8.x-3.0-beta3+30-dev",
+                    "datestamp": "1466803439"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1148,7 +1149,7 @@
             "support": {
                 "source": "https://www.drupal.org/project/bootstrap"
             },
-            "time": "2016-06-23 00:45:28"
+            "time": "2016-06-24 21:19:09"
         },
         {
             "name": "drupal/bootstrap_layouts",
@@ -1345,12 +1346,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-composer/drupal-core.git",
-                "reference": "b889d5ae7e8092acfe4e39b9430f9433d2b78a75"
+                "reference": "30890bb4fb57412240b871d841b2ea27a7ffd3ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/b889d5ae7e8092acfe4e39b9430f9433d2b78a75",
-                "reference": "b889d5ae7e8092acfe4e39b9430f9433d2b78a75",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/30890bb4fb57412240b871d841b2ea27a7ffd3ba",
+                "reference": "30890bb4fb57412240b871d841b2ea27a7ffd3ba",
                 "shasum": ""
             },
             "require": {
@@ -1406,6 +1407,7 @@
                 "drupal/content_translation": "self.version",
                 "drupal/contextual": "self.version",
                 "drupal/core-annotation": "self.version",
+                "drupal/core-assertion": "self.version",
                 "drupal/core-bridge": "self.version",
                 "drupal/core-datetime": "self.version",
                 "drupal/core-dependency-injection": "self.version",
@@ -1507,7 +1509,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2016-06-23 13:27:24"
+            "time": "2016-06-25 16:05:25"
         },
         {
             "name": "drupal/ctools",
@@ -3015,12 +3017,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "d591cba5ee515bbf3ac2392f269abb7c0b097e1c"
+                "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/d591cba5ee515bbf3ac2392f269abb7c0b097e1c",
-                "reference": "d591cba5ee515bbf3ac2392f269abb7c0b097e1c",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
+                "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
                 "shasum": ""
             },
             "require": {
@@ -3065,7 +3067,7 @@
                 "stream",
                 "uri"
             ],
-            "time": "2016-06-20 22:24:42"
+            "time": "2016-06-24 23:00:38"
         },
         {
             "name": "henrikbjorn/lurker",
@@ -5948,12 +5950,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "68620b32e416163e3f152c694b064ed0ec311c7c"
+                "reference": "cdccdbbdf35f38a70eb6931667a76fc68012a999"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/68620b32e416163e3f152c694b064ed0ec311c7c",
-                "reference": "68620b32e416163e3f152c694b064ed0ec311c7c",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/cdccdbbdf35f38a70eb6931667a76fc68012a999",
+                "reference": "cdccdbbdf35f38a70eb6931667a76fc68012a999",
                 "shasum": ""
             },
             "require": {
@@ -6001,7 +6003,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-06-21 07:05:03"
+            "time": "2016-06-24 05:05:43"
         },
         {
             "name": "willdurand/geocoder",
@@ -7767,12 +7769,12 @@
         "drupal/entity": 20,
         "drupal/inline_entity_form": 20,
         "drupalcamps/conference_attendees": 20,
-        "drupalcamps/conference_sessions": 20,
         "drupalcamps/conference_content": 20,
         "drupalcamps/conference_job_board": 20,
         "drupalcamps/conference_location": 20,
         "drupalcamps/conference_media": 20,
         "drupalcamps/conference_program": 20,
+        "drupalcamps/conference_sessions": 20,
         "drupalcamps/conference_sponsors": 20,
         "drupalcamps/conference_ticketing": 20
     },

@@ -718,3 +718,4 @@ $local_settings = dirname(__FILE__) . '/settings.local.php';
 if (file_exists($local_settings)) {
     include dirname(__FILE__) . '/settings.local.php';
 }
+$settings['install_profile'] = 'standard';
