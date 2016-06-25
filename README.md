@@ -1,16 +1,35 @@
 # DrupalCamps project template [![Build Status](https://travis-ci.org/mglaman/drupalcamp-base.svg?branch=master)](https://travis-ci.org/mglaman/drupalcamp-base)
 
-Use [Composer](https://getcomposer.org/) to a DrupalCamp project template.
+This project provides a project template to facilitate creating a website for an
+ event like a DrupalCamp or WordCamp. Websites created with the project can be
+ used as a one-time website, or as an ongoing website for a recurring event like
+ an annual camp or monthly user meetup.
 
-Based on [drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project) and [drupalcommerce/project-base](https://github.com/drupalcommerce/project-base).
+Based on [drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project)
+ and [drupalcommerce/project-base](https://github.com/drupalcommerce/project-base).
 
-## Usage
+## What does the template do?
+
+A quick outline of features:
+
+* Drupal is installed in the `web` directory.
+* Modules (packages of type `drupal-module`) are placed in `web/modules/contrib/`
+* Theme (packages of type `drupal-theme`) are placed in `web/themes/contrib/`
+* Profiles (packages of type `drupal-profile`) are placed in `web/profiles/contrib/`
+* Creates default writable versions of `settings.php` and `services.yml`.
+* Creates the `sites/default/files` directory.
+* Latest version of DrupalConsole is installed locally for use at `vendor/bin/drupal`.
+* Default `services.yml` and `settings.local.php` symlinked to `sites/default`.
+
+## Requirements
 
 First you need to [install composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
 
 > Note: The instructions below refer to the [global composer installation](https://getcomposer.org/doc/00-intro.md#globally).
 > You might need to replace `composer` with `php composer.phar` (or similar)
 > for your setup.
+
+## Usage
 
 After that you can create the project:
 
@@ -28,42 +47,6 @@ composer require "drupal/devel:8.1.x-dev"
 The `composer create-project` command passes ownership of all files to the
 project that is created. You should create a new git repository, and commit
 all files not excluded by the .gitignore file.
-
-### Providing custom modules, themes, or a profile
-
-Your custom modules, themes, and profiles can be added by modifying the
-`repositories` portion of the `composer.json`. See the following examples
-
-Local path
-
-```json
-{
-    "type": "path",
-    "url": "./tests/testing_camp"
-}
-```
-Other repo, not on packagist or drupal.org:
-
-```json
-{
-    "type": "vcs",
-    "url": "https://github.com/drupalcommerce/commerce_base"
-}
-
-```
-
-## What does the template do
-
-A quick outline of features
-
-* Drupal is installed in the `web` directory.
-* Modules (packages of type `drupal-module`) are placed in `web/modules/contrib/`
-* Theme (packages of type `drupal-theme`) are placed in `web/themes/contrib/`
-* Profiles (packages of type `drupal-profile`) are placed in `web/profiles/contrib/`
-* Creates default writable versions of `settings.php` and `services.yml`.
-* Creates the `sites/default/files` directory.
-* Latest version of DrupalConsole is installed locally for use at `vendor/bin/drupal`.
-* Default `services.yml` and `settings.local.php` symlinked to `sites/default`.
 
 ## Updating Drupal Core
 
@@ -88,6 +71,45 @@ Follow the steps below to update your core files.
    of a [three-way merge tool such as kdiff3](http://www.gitshah.com/2010/12/how-to-setup-kdiff-as-diff-tool-for-git.html). This setup is not necessary if your changes are simple;
    keeping all of your modifications at the beginning or end of the file is a
    good strategy to keep merges easy.
+
+### Providing custom modules, themes, or a profile
+
+Your custom modules, themes, and profiles can be added by modifying the
+`repositories` portion of the `composer.json`. See the following examples
+
+Local path
+
+```json
+{
+    "type": "path",
+    "url": "./tests/testing_camp"
+}
+```
+Other repo, not on packagist or drupal.org:
+
+```json
+{
+    "type": "vcs",
+    "url": "https://github.com/drupalcommerce/commerce_base"
+}
+
+```
+
+## Contribute
+
+### Docker
+
+The virtual environment is [Docker](https://docs.docker.com/). See also the
+ [Getting Started Documentation](https://docs.docker.com/machine/get-started/)
+ for more details.
+
+To get your Docker VM up-and-running:
+
+1. Create the machine:```docker-machine create --driver virtualbox <machine name ie. default|midcamp>```
+1. Set up the environment: ```docker-machine env default```
+1. Connect to the new machine: ```eval "$(docker-machine env default)"```
+1. Build the docker vm: ```docker-compose up --build -d```
+1. See what the IP address is: ```docker-machine ip default```
 
 ## FAQ
 
