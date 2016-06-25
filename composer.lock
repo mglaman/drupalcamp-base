@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d7f3062448be1460baaef765b9e6543a",
-    "content-hash": "9499d589a81ebd1c1f1654f756423a5c",
+    "hash": "71e3159cdc7dd1fbcfd4c884b08f5fa2",
+    "content-hash": "4eab57f82ee0ae3ae13b4a6c17071d2e",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2180,6 +2180,96 @@
                 "source": "https://www.drupal.org/project/media_entity_twitter"
             },
             "time": "2016-06-18 14:57:45"
+        },
+        {
+            "name": "drupal/message",
+            "version": "dev-1.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/message",
+                "reference": "0a372ad2496c513e757edfc9561dfc545d32d5aa"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "suggest": {
+                "drupal/token": "Required by drupal/message_example"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1463642945"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Grayside",
+                    "homepage": "https://www.drupal.org/user/346868"
+                },
+                {
+                    "name": "amitaibu",
+                    "homepage": "https://www.drupal.org/user/57511"
+                },
+                {
+                    "name": "itamar",
+                    "homepage": "https://www.drupal.org/user/1757910"
+                }
+            ],
+            "description": "Message",
+            "homepage": "https://www.drupal.org/project/message",
+            "support": {
+                "source": "https://www.drupal.org/project/message"
+            },
+            "time": "2016-05-19 05:57:36"
+        },
+        {
+            "name": "drupal/message_notify",
+            "version": "dev-1.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/message_notify",
+                "reference": "7c5736b021090bfd034d19917c66225331fce929"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/message": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1465470839"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "amitaibu",
+                    "homepage": "https://www.drupal.org/user/57511"
+                }
+            ],
+            "description": "Notification framework for the Message module",
+            "homepage": "https://drupal.org/project/message_notify",
+            "support": {
+                "issues": "https://drupal.org/project/issues/message_notify",
+                "irc": "irc://irc.freenode.org/drupal",
+                "source": "https://cgit.drupalcode.org/message_notify"
+            },
+            "time": "2016-05-31 06:26:38"
         },
         {
             "name": "drupal/metatag",
@@ -7768,6 +7858,8 @@
         "drupal/commerce": 20,
         "drupal/entity": 20,
         "drupal/inline_entity_form": 20,
+        "drupal/message": 20,
+        "drupal/message_notify": 20,
         "drupalcamps/conference_attendees": 20,
         "drupalcamps/conference_content": 20,
         "drupalcamps/conference_job_board": 20,
