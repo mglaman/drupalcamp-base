@@ -6,7 +6,7 @@ phpfpm:
     environment: { PLATFORM_DOCKER: drupalcamp-base, PHP_IDE_CONFIG: serverName=drupalcamp-base.dev }
 mariadb:
     command: 'mysqld --user=root --verbose'
-    image: mariadb
+    image: 'mariadb:10.1.10'
     ports: ['3306']
     volumes: ['./docker/conf/mysql.cnf:/etc/mysql/my.cnf']
     environment: { MYSQL_DATABASE: data, MYSQL_USER: mysql, MYSQL_PASSWORD: mysql, MYSQL_ALLOW_EMPTY_PASSWORD: 'yes', MYSQL_ROOT_PASSWORD: 'root' }
