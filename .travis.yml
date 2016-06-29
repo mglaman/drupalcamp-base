@@ -12,6 +12,9 @@ cache:
   - "$HOME/.composer/cache"
 services:
   - docker
+addons:
+  hosts:
+    - drupalcamp-base.dev
 
 env:
   global:
