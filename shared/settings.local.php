@@ -39,7 +39,7 @@ if (empty($_SERVER['PLATFORM_DOCKER'])) {
   // Default config within Docker container.
   $databases['default']['default'] = array(
     'driver' => 'mysql',
-    'host' => 'drupalcamp-base.platform',
+    'host' => 'drupalcamp-base.dev',
     'port' => $port,
     'username' => 'mysql',
     'password' => 'mysql',
