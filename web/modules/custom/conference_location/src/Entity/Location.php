@@ -43,10 +43,10 @@ use Drupal\Core\Field\BaseFieldDefinition;
  *     "bundle" = "type",
  *     "label" = "name",
  *     "langcode" = "langcode",
- *     "uuid" = "uuid",
+ *     "uuid" = "uuid"
  *   },
  *   links = {
- *     "collection" = /admin/conference/locations",
+ *     "collection" = "/admin/conference/locations",
  *     "canonical" = "/location/{conference_location}",
  *     "edit-form" = "/location/{conference_location}/edit",
  *     "delete-form" = "/location/{conference_location}/delete",
