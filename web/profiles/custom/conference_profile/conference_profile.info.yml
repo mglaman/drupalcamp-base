@@ -40,10 +40,12 @@ dependencies:
   - views_ui
   - tour
   - automated_cron
+  - big_pipe
 
   # Conference
   - conference_base
   - conference_attendees
+  - conference_location
 
 themes:
   - bartik

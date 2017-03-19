@@ -1,0 +1,8 @@
+entity.conference_location.canonical:
+  route_name: entity.conference_location.canonical
+  base_route: entity.conference_location.canonical
+  title: View
+entity.conference_location.edit_form:
+  route_name: entity.conference_location.edit_form
+  base_route: entity.conference_location.edit_form
+  title: Edit

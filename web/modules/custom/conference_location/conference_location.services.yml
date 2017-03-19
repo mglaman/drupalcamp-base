@@ -1,0 +1,4 @@
+services:
+  plugin.manager.conference_location_type:
+    class: Drupal\conference_location\ConferenceLocationTypeManager
+    parent: default_plugin_manager

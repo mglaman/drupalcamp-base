@@ -1,0 +1,5 @@
+entity.conference_location.collection:
+  title: 'Locations'
+  route_name: 'entity.conference_location.collection'
+  parent: 'conference_base.admin_conference'
+  description: 'Manage your locations.'

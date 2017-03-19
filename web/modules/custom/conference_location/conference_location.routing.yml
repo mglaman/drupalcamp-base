@@ -1,0 +1,7 @@
+entity.conference_location.collection:
+  path: '/admin/conference/locations'
+  defaults:
+    _entity_list: 'conference_location'
+    _title: 'Locations'
+  requirements:
+    _permission: 'administer conference_location'
