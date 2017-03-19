@@ -26,7 +26,7 @@ if (empty($_SERVER['APP_DOCKER'])) {
   // Default config within Docker container.
   $databases['default']['default'] = array(
     'driver' => 'mysql',
-    'host' => 'commerce2.dev',
+    'host' => 'drupalcamps.dev',
     'port' => $port,
     'username' => 'mysql',
     'password' => 'mysql',

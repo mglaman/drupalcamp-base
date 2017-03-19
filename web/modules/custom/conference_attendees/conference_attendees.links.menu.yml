@@ -1,0 +1,5 @@
+conference_attendees.settings.form:
+  title: 'Attendees'
+  route_name: 'conference_attendees.settings.form'
+  parent: 'conference_base.configuration'
+  description: 'Attendee settings.'

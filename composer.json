@@ -28,6 +28,7 @@
     "cweagans/composer-patches": "~1.0",
     "drupal/core": "~8.2.0",
     "drupal/console": "^1",
+    "drush/drush": "~8.0",
     "phing/phing": "^2.14",
     "drupal/pathauto": "^1",
     "drupal/commerce": "^2",

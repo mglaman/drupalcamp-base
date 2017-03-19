@@ -80,6 +80,8 @@ class SettingsForm extends ConfigFormBase {
       '#title' => $this->t('Allow attendees to provide a personal bio'),
       '#default_value' => $config->get('enable_attendee_bio'),
     ];
+
+    return $form;
   }
 
   /**

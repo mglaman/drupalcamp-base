@@ -1,0 +1,14 @@
+conference_base.admin_conference:
+  path: '/admin/conference'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Commerce'
+  requirements:
+    _permission: 'access conference administration pages'
+conference_base.configuration:
+  path: '/admin/conference/config'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Configuration'
+  requirements:
+    _permission: 'access conference administration pages'

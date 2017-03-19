@@ -3,6 +3,7 @@ description: Items relating to attendees of a conference.
 type: module
 core: 8.x
 dependencies:
+  - conference_base
   - profile
   - entity
   # ConfigurableFieldManagerInterface, BundleFieldDefinition

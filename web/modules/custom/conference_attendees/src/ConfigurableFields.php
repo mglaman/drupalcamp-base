@@ -23,7 +23,7 @@ class ConfigurableFields {
   public static function getBioField(ProfileTypeInterface $bundle, $label = 'Bio') {
     $field_definition = BundleFieldDefinition::create('text_long')
       ->setTargetEntityTypeId('profile')
-      ->setTargetBundle($bundle)
+      ->setTargetBundle($bundle->id())
       ->setName('bio')
       ->setLabel($label)
       ->setSetting('display_summary', FALSE)

@@ -1,0 +1,50 @@
+name: Conference Base
+type: profile
+core: 8.x
+description: 'Install with Conference pre-configured.'
+distribution:
+  name: 'Drupal'
+dependencies:
+  # Standard
+  - node
+  - history
+  - block
+  - breakpoint
+  - ckeditor
+  - color
+  - config
+  - comment
+  - contextual
+  - contact
+  - menu_link_content
+  - datetime
+  - block_content
+  - quickedit
+  - editor
+  - help
+  - image
+  - menu_ui
+  - options
+  - path
+  - page_cache
+  - dynamic_page_cache
+  - taxonomy
+  - dblog
+  - search
+  - shortcut
+  - toolbar
+  - field_ui
+  - file
+  - rdf
+  - views
+  - views_ui
+  - tour
+  - automated_cron
+
+  # Conference
+  - conference_base
+  - conference_attendees
+
+themes:
+  - bartik
+  - seven

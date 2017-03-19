@@ -1,5 +1,5 @@
 conference_attendees.settings.form:
-  path: '/admin/conference/attendees/settings'
+  path: '/admin/conference/config/attendees'
   defaults:
     _form: '\Drupal\conference_attendees\Form\SettingsForm'
     _title: 'Settings'

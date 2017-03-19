@@ -1,0 +1,4 @@
+name: Conference Base
+description: Base items for Conference
+type: module
+core: 8.x

@@ -1,0 +1,13 @@
+conference_base.admin_conference:
+  title: 'Conference'
+  route_name: 'conference_base.admin_conference'
+  parent: 'system.admin'
+  description: 'Administer your conference.'
+  weight: -9
+
+conference_base.configuration:
+  title: 'Configuration'
+  route_name: 'conference_base.configuration'
+  parent: 'conference_base.admin_conference'
+  description: 'Configure your conference settings.'
+  weight: 10
