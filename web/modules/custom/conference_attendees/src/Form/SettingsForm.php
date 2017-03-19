@@ -93,6 +93,12 @@ class SettingsForm extends ConfigFormBase {
       '#title' => $this->t('Preference options'),
       '#summary' => $this->t('Allows attendees to specify specific preferences'),
     ];
+    $form['preferences']['enable_dietary_preference'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Allow attendees to specify and dietary needs'),
+      '#description' => $this->t('If there will be snacks, lunch, or dinner served this allows attendees to specify any dietary needs they have.'),
+      '#default_value' => $config->get('enable_dietary_preference'),
+    ];
 
     return $form;
   }
@@ -115,6 +121,11 @@ class SettingsForm extends ConfigFormBase {
           // @todo uninstall if unchecked.
           if ($value) {
             $this->installOrganizationFields();
+          }
+          break;
+        case 'enable_dietary_preference':
+          if ($value) {
+            $this->installPreferenceDietaryField();
           }
           break;
       }
@@ -218,6 +229,39 @@ class SettingsForm extends ConfigFormBase {
     }
     catch (\Exception $e) {
       drupal_set_message($this->t('There was an error adding the organization job title field'), 'error');
+    }
+  }
+
+  /**
+   * Ensures that the general profile type bundle is present.
+   *
+   * @return \Drupal\profile\Entity\ProfileTypeInterface
+   *   The profile type.
+   */
+  protected function ensurePreferencesProfileType() {
+    $bundle = $this->profileTypeStorage->load('preferences');
+    if (!$bundle) {
+      $bundle = ConfigurableBundles::getPreferencesProfileType();
+      $this->profileTypeStorage->save($bundle);
+    }
+    return $bundle;
+  }
+
+  /**
+   * Installs the attendee bio field on general profile type.
+   */
+  protected function installPreferenceDietaryField() {
+    $bundle = $this->ensurePreferencesProfileType();
+    try {
+      $bundle_field = ConfigurableFields::getPreferenceDietaryField($bundle);
+      $this->configurableFieldManager->createField($bundle_field);
+    }
+    catch (\RuntimeException $e) {
+      // @todo properly check if field exists first instead of just catching.
+    }
+    catch (\Exception $e) {
+      drupal_set_message($e->getMessage(), 'error');
+      drupal_set_message($this->t('There was an error adding the dietary needs field'), 'error');
     }
   }
 

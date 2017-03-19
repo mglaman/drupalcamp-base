@@ -6,5 +6,6 @@ dependencies:
   - conference_base
   - profile
   - entity
+  - options
   # ConfigurableFieldManagerInterface, BundleFieldDefinition
   - commerce

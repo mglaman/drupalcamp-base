@@ -5,3 +5,9 @@ conference_attendees.settings:
     enable_attendee_bio:
       type: boolean
       label: 'Allow attendees to enter a bio'
+    enable_organization_info:
+      type: boolean
+      label: 'Allow attendees to enter a bio'
+    enable_dietary_preference:
+      type: boolean
+      label: 'Allow attendees to enter a bio'

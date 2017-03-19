@@ -124,4 +124,45 @@ class ConfigurableFields {
     return $field_definition;
   }
 
+  /**
+   * Gets the bundle field definition for the dietary needs field.
+   *
+   * @param \Drupal\profile\Entity\ProfileTypeInterface $bundle
+   *   The profile type.
+   * @param string $label
+   *   The field label
+   * @return \Drupal\commerce\BundleFieldDefinition
+   *    The bundle field definition.
+   */
+  public static function getPreferenceDietaryField(ProfileTypeInterface $bundle, $label = 'Dietary needs') {
+    $field_definition = BundleFieldDefinition::create('list_string')
+      ->setTargetEntityTypeId('profile')
+      ->setTargetBundle($bundle->id())
+      ->setName('dietary_needs')
+      ->setLabel($label)
+      ->setSetting('allowed_values_function', '\Drupal\conference_attendees\ConfigurableFields::getPreferenceDietaryNeedValues')
+      ->setDisplayOptions('form', [
+        'type' => 'options_select',
+        'weight' => 4,
+      ]);
+
+    return $field_definition;
+  }
+
+  /**
+   * Returns field values for the dietary needs field.
+   *
+   * @return array
+   */
+  public static function getPreferenceDietaryNeedValues() {
+    return [
+      'none' => t('No restrictions'),
+      'vegetarian' => t('Vegetarian'),
+      'vegan' => t('Vegan'),
+      'gluten_free' => t('Gluten free'),
+      'halal' => t('Halal'),
+      'kosher' => t('Kosher'),
+    ];
+  }
+
 }
