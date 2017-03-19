@@ -25,7 +25,7 @@ test:
     - phantomjs --webdriver=4444:
         background: true
     - mkdir web/sites/simpletest
-    - ./bin/drush --root=$(pwd)/web si commerce_base --site-name="Commerce 2" --account-pass=admin --yes
+    - ./bin/drush --root=$(pwd)/web si conference_profile --site-name="DrupalCamp Conference" --account-pass=admin --yes
     - curl -I http://drupalcamps.dev/
   override:
     - ./bin/behat -f junit -o $CIRCLE_TEST_REPORTS -f pretty -o std

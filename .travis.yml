@@ -26,7 +26,7 @@ install:
   - composer install --prefer-dist --no-interaction
   - phantomjs --webdriver=4444 &
   - mkdir web/sites/simpletest
-  - ./bin/drush --root=$(pwd)/web si commerce_base --site-name="DrupalCamps Conference" --account-pass=admin --yes
+  - ./bin/drush --root=$(pwd)/web si conference_profile --site-name="DrupalCamps Conference" --account-pass=admin --yes
   - curl -I http://drupalcamps.dev/
 
 script:
