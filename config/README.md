@@ -8,7 +8,6 @@ Example in `settings.php`
 ```yaml
 // Configuration directories.
 $config_directories = array(
-  CONFIG_STAGING_DIRECTORY => '../../../config/staging',
-  CONFIG_SYNC_DIRECTORY => '../../../config/staging',
+  CONFIG_SYNC_DIRECTORY => '../../../config/sync',
 );
 ```

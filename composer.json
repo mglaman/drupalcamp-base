@@ -1,138 +1,99 @@
 {
-    "name": "mglaman/drupalcamp-base",
-    "description": "DrupalCamp website project template",
-    "type": "project",
-    "license": "GPL-2.0+",
-    "authors": [
-        {
-            "name": "",
-            "role": ""
-        }
-    ],
-    "repositories": [
-        {
-            "type": "composer",
-            "url":  "https://packages.drupal.org/8"
-        },
-        {
-            "type": "path",
-            "url": "./tests/testing_camp"
-        },
-        {
-            "type": "path",
-            "url": "./modules/conference_attendees"
-        },
-        {
-            "type": "path",
-            "url": "./modules/conference_content"
-        },
-        {
-            "type": "path",
-            "url": "./modules/conference_event"
-        },
-        {
-            "type": "path",
-            "url": "./modules/conference_job_board"
-        },
-        {
-            "type": "path",
-            "url": "./modules/conference_location"
-        },
-        {
-            "type": "path",
-            "url": "./modules/conference_media"
-        },
-        {
-            "type": "path",
-            "url": "./modules/conference_program"
-        },
-        {
-            "type": "path",
-            "url": "./modules/conference_sessions"
-        },
-        {
-            "type": "path",
-            "url": "./modules/conference_sponsors"
-        },
-        {
-            "type": "path",
-            "url": "./modules/conference_ticketing"
-        }
-    ],
-    "require": {
-        "cweagans/composer-patches": "^1.5.0",
-        "composer/installers": "^1.0",
-        "drupal-composer/drupal-scaffold": "^1.2",
-        "drush/drush": "8.0.5",
-        "drupal/core": "~8.1",
-        "drupal/console": "~0.10",
-        "phing/phing": "^2.14",
-        "drupal/pathauto": "~1",
-        "drupal/commerce": "2.0.x-dev",
-        "drupal/entity": "1.0.x-dev",
-        "drupal/inline_entity_form": "1.0.x-dev",
-        "drupal/layout_plugin": "~1",
-        "drupal/page_manager": "~1",
-        "drupal/metatag": "~1",
-        "drupal/message": "1.0.x-dev",
-        "drupal/message_notify": "1.0.x-dev",
-        "drupal/bootstrap": "~3",
-        "drupal/bootstrap_layouts": "~1",
-        "drupalcamps/conference_attendees": "dev-master",
-        "drupalcamps/conference_content": "dev-master",
-        "drupalcamps/conference_job_board": "dev-master",
-        "drupalcamps/conference_location": "dev-master",
-        "drupalcamps/conference_media": "dev-master",
-        "drupalcamps/conference_program": "dev-master",
-        "drupalcamps/conference_sessions": "dev-master",
-        "drupalcamps/conference_sponsors": "dev-master",
-        "drupalcamps/conference_ticketing": "dev-master"
-    },
-    "require-dev": {
-        "behat/mink": "~1.7",
-        "behat/mink-goutte-driver": "~1.2",
-        "jcalderonzumba/gastonjs": "~1.0.2",
-        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
-        "mikey179/vfsStream": "~1.2",
-        "phpunit/phpunit": "~4.8",
-        "symfony/css-selector": "~2.8"
-    },
-    "conflict": {
-        "drupal/drupal": "*"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": false,
-    "autoload": {
-         "classmap": [
-             "scripts/composer/ScriptHandler.php"
-         ]
-    },
-    "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::buildScaffold",
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "if [ -f shared/settings.php ] ; then cd web/sites/default; rm settings.php; ln -s ../../../shared/settings.php settings.php; fi",
-            "if [ -f shared/settings.local.php ] ; then cd web/sites/default; rm settings.local.php; ln -s ../../../shared/settings.local.php settings.local.php; fi",
-            "if [ -f shared/drushrc.php ] ; then cd web/sites/default; rm drushrc.php; ln -s ../../../shared/drushrc.php drushrc.php; fi",
-            "if [ -a 'shared/files' ] && ! [ -a 'web/sites/default/files' ] ; then cd web/sites/default; rm files; ln -s ../../../shared/files/ files; fi"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::buildScaffold",
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "if [ -f shared/settings.php ] ; then cd web/sites/default; rm settings.php; ln -s ../../../shared/settings.php settings.php; fi",
-            "if [ -f shared/settings.local.php ] ; then cd web/sites/default; rm settings.local.php; ln -s ../../../shared/settings.local.php settings.local.php; fi",
-            "if [ -f shared/drushrc.php ] ; then cd web/sites/default; rm drushrc.php; ln -s ../../../shared/drushrc.php drushrc.php; fi"
-        ]
-    },
-    "extra": {
-        "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/modules/sandbox/{$name}": ["type:drupal-sandbox"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/contrib/{$name}": ["type:drupal-drush"]
-        }
+  "name": "mglaman/drupalcamp-base",
+  "description": "DrupalCamp website project template",
+  "type": "project",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Matt Glaman <nmd.matt@gmail.com>",
+      "role": ""
     }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "path",
+      "url": "./tests/testing_camp"
+    }
+  ],
+  "config": {
+    "bin-dir": "bin"
+  },
+  "require": {
+    "composer/installers": "^1.2",
+    "drupal-composer/drupal-scaffold": "^2.2",
+    "cweagans/composer-patches": "~1.0",
+    "drupal/core": "~8.2.0",
+    "drupal/console": "^1",
+    "phing/phing": "^2.14",
+    "drupal/pathauto": "^1",
+    "drupal/commerce": "^2",
+    "drupal/entity": "1.x-dev",
+    "drupal/inline_entity_form": "^1",
+    "drupal/layout_plugin": "^1",
+    "drupal/page_manager": "^1",
+    "drupal/metatag": "^1",
+    "drupal/bootstrap": "^3",
+    "drupal/bootstrap_layouts": "^1"
+  },
+  "require-dev": {
+    "behat/mink": "~1.7",
+    "behat/mink-goutte-driver": "~1.2",
+    "jcalderonzumba/gastonjs": "~1.0.2",
+    "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+    "mikey179/vfsStream": "~1.2",
+    "phpunit/phpunit": "~4.8",
+    "symfony/css-selector": "~2.8",
+    "drupal/drupal-extension": "^3.2"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "classmap": [
+      "scripts/composer/ScriptHandler.php"
+    ]
+  },
+  "scripts": {
+    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+    "pre-install-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    ],
+    "pre-update-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    ],
+    "post-install-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+    ],
+    "post-update-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+    ]
+  },
+  "extra": {
+    "installer-paths": {
+      "web/core": [
+        "type:drupal-core"
+      ],
+      "web/libraries/{$name}": [
+        "type:drupal-library"
+      ],
+      "web/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "web/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "web/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "drush/contrib/{$name}": [
+        "type:drupal-drush"
+      ]
+    }
+  }
 }
