@@ -10,6 +10,8 @@ Feature: Configuring the attendee organization fields
     Then I check the box "Allow attendees to enter organization info"
     And I press "Save configuration"
     Then I should see "The configuration options have been saved."
+    # Local tasks block just won't clear.
+    And the cache has been cleared
 
   @api
   Scenario: As an attendee, I can set a bio
