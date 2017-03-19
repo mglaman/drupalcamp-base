@@ -69,23 +69,29 @@ class SettingsForm extends ConfigFormBase {
     $form = parent::buildForm($form, $form_state);
 
     $config = $this->config('conference_attendees.settings');
-    $form['attendee'] = [
+    $form['general'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('General information'),
       '#summary' => $this->t('Allows attendees to add general information about themselves'),
     ];
     // @todo disable if it has data, so it cannot be removed.
-    $form['attendee']['enable_attendee_bio'] = [
+    $form['general']['enable_attendee_bio'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Allow attendees to provide a personal bio'),
       '#default_value' => $config->get('enable_attendee_bio'),
     ];
     // @todo disable if it has data, so it cannot be removed.
-    $form['attendee']['enable_organization_info'] = [
+    $form['general']['enable_organization_info'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Allow attendees to enter organization info'),
       '#description' => $this->t('This allows attendees to provide information about their employer or the organization they will be representing.'),
       '#default_value' => $config->get('enable_organization_info'),
+    ];
+
+    $form['preferences'] = [
+      '#type' => 'fieldset',
+      '#title' => $this->t('Preference options'),
+      '#summary' => $this->t('Allows attendees to specify specific preferences'),
     ];
 
     return $form;
@@ -116,6 +122,11 @@ class SettingsForm extends ConfigFormBase {
       $config->set($key, $value);
     }
     $config->save();
+
+    // @todo inject, try to just do setRebuildNeeded.
+    // Need to rebuild so that new profile types show up in user tabs.
+    \Drupal::getContainer()->get('router.builder')->rebuild();
+
     parent::submitForm($form, $form_state);
   }
 

@@ -32,4 +32,17 @@ class ConfigurableBundles {
     return $bundle;
   }
 
+  /**
+   * @return \Drupal\profile\Entity\ProfileTypeInterface
+   */
+  public static function getPreferencesProfileType() {
+    $bundle = ProfileType::create([
+      'id' => 'preferences',
+      'label' => t('Preferences'),
+      'registration' => FALSE,
+      'roles' => [],
+    ]);
+    return $bundle;
+  }
+
 }
