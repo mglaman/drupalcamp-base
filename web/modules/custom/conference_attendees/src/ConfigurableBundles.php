@@ -19,4 +19,17 @@ class ConfigurableBundles {
     return $bundle;
   }
 
+  /**
+   * @return \Drupal\profile\Entity\ProfileTypeInterface
+   */
+  public static function getOrganizationProfileType() {
+    $bundle = ProfileType::create([
+      'id' => 'organization',
+      'label' => t('Organization'),
+      'registration' => FALSE,
+      'roles' => [],
+    ]);
+    return $bundle;
+  }
+
 }

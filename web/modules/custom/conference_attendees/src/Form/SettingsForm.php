@@ -80,6 +80,13 @@ class SettingsForm extends ConfigFormBase {
       '#title' => $this->t('Allow attendees to provide a personal bio'),
       '#default_value' => $config->get('enable_attendee_bio'),
     ];
+    // @todo disable if it has data, so it cannot be removed.
+    $form['attendee']['enable_organization_info'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Allow attendees to enter organization info'),
+      '#description' => $this->t('This allows attendees to provide information about their employer or the organization they will be representing.'),
+      '#default_value' => $config->get('enable_organization_info'),
+    ];
 
     return $form;
   }
@@ -96,6 +103,12 @@ class SettingsForm extends ConfigFormBase {
           // @todo uninstall if unchecked.
           if ($value) {
             $this->installAttendeeBioField();
+          }
+          break;
+        case 'enable_organization_info':
+          // @todo uninstall if unchecked.
+          if ($value) {
+            $this->installOrganizationFields();
           }
           break;
       }
@@ -142,6 +155,58 @@ class SettingsForm extends ConfigFormBase {
     }
     catch (\Exception $e) {
       drupal_set_message($this->t('There was an error adding the attendee bio field'), 'error');
+    }
+  }
+
+  /**
+   * Ensures that the organization profile type bundle is present.
+   *
+   * @return \Drupal\profile\Entity\ProfileTypeInterface
+   *   The profile type.
+   */
+  protected function ensureOrganizationProfileType() {
+    $bundle = $this->profileTypeStorage->load('organization');
+    if (!$bundle) {
+      $bundle = ConfigurableBundles::getOrganizationProfileType();
+      $this->profileTypeStorage->save($bundle);
+    }
+    return $bundle;
+  }
+
+  /**
+   * Installs the attendee bio field on general profile type.
+   */
+  protected function installOrganizationFields() {
+    $bundle = $this->ensureOrganizationProfileType();
+    try {
+      $bundle_field = ConfigurableFields::getOrganizationNameField($bundle);
+      $this->configurableFieldManager->createField($bundle_field);
+    }
+    catch (\RuntimeException $e) {
+      // @todo properly check if field exists first instead of just catching.
+    }
+    catch (\Exception $e) {
+      drupal_set_message($this->t('There was an error adding the organization name field'), 'error');
+    }
+    try {
+      $bundle_field = ConfigurableFields::getOrganizationWebsiteField($bundle);
+      $this->configurableFieldManager->createField($bundle_field);
+    }
+    catch (\RuntimeException $e) {
+      // @todo properly check if field exists first instead of just catching.
+    }
+    catch (\Exception $e) {
+      drupal_set_message($this->t('There was an error adding the organization website field'), 'error');
+    }
+    try {
+      $bundle_field = ConfigurableFields::getOrganizationJobTitleField($bundle);
+      $this->configurableFieldManager->createField($bundle_field);
+    }
+    catch (\RuntimeException $e) {
+      // @todo properly check if field exists first instead of just catching.
+    }
+    catch (\Exception $e) {
+      drupal_set_message($this->t('There was an error adding the organization job title field'), 'error');
     }
   }
 
