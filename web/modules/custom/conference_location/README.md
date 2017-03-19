@@ -5,9 +5,9 @@ Provides a repository of physical locations (event venue, session venue, etc.)
 
 Entities
 * Location
-** Bundles:
-*** Venue
-**** Address
-**** Things
-*** Rooms
-**** Location has rooms
+  * Bundles:
+    * Venue
+      * Address
+      * Things
+    * Rooms
+      * Location has rooms

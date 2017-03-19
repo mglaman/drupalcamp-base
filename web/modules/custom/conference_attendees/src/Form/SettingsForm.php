@@ -9,6 +9,7 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\user\UserInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class SettingsForm extends ConfigFormBase {
@@ -161,6 +162,10 @@ class SettingsForm extends ConfigFormBase {
     if (!$bundle) {
       $bundle = ConfigurableBundles::getGeneralProfileType();
       $this->profileTypeStorage->save($bundle);
+      user_role_grant_permissions(UserInterface::AUTHENTICATED_ROLE, [
+        'add own general profile',
+        'edit own general profile',
+      ]);
     }
     return $bundle;
   }
@@ -193,6 +198,10 @@ class SettingsForm extends ConfigFormBase {
     if (!$bundle) {
       $bundle = ConfigurableBundles::getOrganizationProfileType();
       $this->profileTypeStorage->save($bundle);
+      user_role_grant_permissions(UserInterface::AUTHENTICATED_ROLE, [
+        'add own organization profile',
+        'edit own organization profile',
+      ]);
     }
     return $bundle;
   }
@@ -245,6 +254,10 @@ class SettingsForm extends ConfigFormBase {
     if (!$bundle) {
       $bundle = ConfigurableBundles::getPreferencesProfileType();
       $this->profileTypeStorage->save($bundle);
+      user_role_grant_permissions(UserInterface::AUTHENTICATED_ROLE, [
+        'add own preferences profile',
+        'edit own preferences profile',
+      ]);
     }
     return $bundle;
   }
