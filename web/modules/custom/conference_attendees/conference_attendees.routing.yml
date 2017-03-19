@@ -1,0 +1,7 @@
+conference_attendees.settings.form:
+  path: '/admin/conference/attendees/settings'
+  defaults:
+    _form: '\Drupal\conference_attendees\Form\SettingsForm'
+    _title: 'Settings'
+  requirements:
+    _permission: 'administer conference attendees'

@@ -1,0 +1,6 @@
+administer conference attendees:
+  title: 'Administer conference attendees'
+  description: 'Allows configuration and management of attendees.'
+verified attendee:
+  title: 'Verified attendee'
+  descriptions: 'Allows marking an attendee as having been verified.'

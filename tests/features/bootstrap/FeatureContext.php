@@ -21,4 +21,18 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
   public function __construct() {
   }
 
+  /**
+   * Goes to logged in user's edit page.
+   *
+   * @When I edit my account
+   */
+  public function whenIEditMyAccount() {
+    if (!$this->loggedIn()) {
+      throw new \Exception('Not logged in');
+    }
+
+    $this->getSession()->visit($this->locatePath('/user'));
+    $this->getSession()->getPage()->clickLink('Edit');
+  }
+
 }

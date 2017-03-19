@@ -1,0 +1,9 @@
+name: Conference Attendees
+description: Items relating to attendees of a conference.
+type: module
+core: 8.x
+dependencies:
+  - profile
+  - entity
+  # ConfigurableFieldManagerInterface, BundleFieldDefinition
+  - commerce

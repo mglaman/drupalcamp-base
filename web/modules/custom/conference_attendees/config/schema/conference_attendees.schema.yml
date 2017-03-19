@@ -1,0 +1,7 @@
+conference_attendees.settings:
+  type: config_object
+  label: 'Attendee settings'
+  mapping:
+    enable_attendee_bio:
+      type: boolean
+      label: 'Allow attendees to enter a bio'

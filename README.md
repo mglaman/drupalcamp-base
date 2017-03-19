@@ -1,4 +1,4 @@
-# DrupalCamps project template [![Build Status](https://travis-ci.org/mglaman/drupalcamp-base.svg?branch=master)](https://travis-ci.org/mglaman/drupalcamp-base)
+# DrupalCamps Project [![Build Status](https://travis-ci.org/mglaman/drupalcamp-base.svg?branch=master)](https://travis-ci.org/mglaman/drupalcamp-base) [![CircleCI](https://circleci.com/gh/mglaman/drupalcamp-base.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/mglaman/drupalcamp-base)
 
 This project provides a project template to facilitate creating a website for an
  event like a DrupalCamp or WordCamp. Websites created with the project can be
