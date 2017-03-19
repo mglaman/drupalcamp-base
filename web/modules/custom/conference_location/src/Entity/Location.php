@@ -26,13 +26,13 @@ use Drupal\Core\Field\BaseFieldDefinition;
  *     "list_builder" = "Drupal\conference_location\LocationListBuilder",
  *     "storage" = "Drupal\commerce\CommerceContentEntityStorage",
  *     "form" = {
- *       "default" = "Drupal\Core\Entity\ContentEntityForm",
- *       "edit" = "Drupal\Core\Entity\ContentEntityForm",
- *       "add" = "Drupal\Core\Entity\ContentEntityForm",
+ *       "default" = "Drupal\conference_location\Form\LocationForm",
+ *       "edit" = "Drupal\conference_location\Form\LocationForm",
+ *       "add" = "Drupal\conference_location\Form\LocationForm",
  *       "delete" = "Drupal\Core\Entity\ContentEntityDeleteForm"
  *     },
  *     "route_provider" = {
- *       "default" = "Drupal\Core\Entity\Routing\DefaultHtmlRouteProvider",
+ *       "default" = "Drupal\conference_location\Routing\LocationHtmlRouteProvider",
  *     },
  *   },
  *   base_table = "conference_location",
@@ -48,6 +48,7 @@ use Drupal\Core\Field\BaseFieldDefinition;
  *   links = {
  *     "collection" = "/admin/conference/locations",
  *     "canonical" = "/location/{conference_location}",
+ *     "add-form" = "/location/add",
  *     "edit-form" = "/location/{conference_location}/edit",
  *     "delete-form" = "/location/{conference_location}/delete",
  *   },

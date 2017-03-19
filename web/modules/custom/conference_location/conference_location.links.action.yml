@@ -1,5 +1,5 @@
 entity.conference_location.add_page:
-  route_name: entity.conference_location.add_page
+  route_name: entity.conference_location.add_form
   title: 'Add location'
   appears_on:
     - entity.conference_location.collection

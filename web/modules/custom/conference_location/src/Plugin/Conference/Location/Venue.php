@@ -27,7 +27,7 @@ class Venue extends PluginBase implements ConferenceLocationTypeInterface {
     ];
     $fields['address'] = BundleFieldDefinition::create('address')
       ->setLabel(t('Address'))
-      ->setDescription(t('The store address.'))
+      ->setDescription(t('The venue address.'))
       ->setCardinality(1)
       ->setRequired(TRUE)
       ->setSetting('fields', array_diff(AddressField::getAll(), $disabled_fields))
@@ -40,6 +40,27 @@ class Venue extends PluginBase implements ConferenceLocationTypeInterface {
       ])
       ->setDisplayConfigurable('view', TRUE)
       ->setDisplayConfigurable('form', TRUE);
+
+    $fields['rooms'] = BundleFieldDefinition::create('entity_reference')
+      ->setName('rooms')
+      ->setLabel('Rooms')
+      ->setCardinality(BundleFieldDefinition::CARDINALITY_UNLIMITED)
+      ->setSetting('target_type', 'conference_location')
+      ->setSetting('handler', 'default')
+      ->setSetting('handler_settings', [
+        'target_bundles' => [
+          'room',
+        ],
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'inline_entity_form_complex',
+        'weight' => 10,
+        'settings' => [
+          'override_labels' => TRUE,
+          'label_singular' => 'room',
+          'label_plural' => 'rooms',
+        ],
+      ]);
 
     return $fields;
   }
