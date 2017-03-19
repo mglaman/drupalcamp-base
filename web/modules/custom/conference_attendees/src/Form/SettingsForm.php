@@ -134,6 +134,8 @@ class SettingsForm extends ConfigFormBase {
     }
     $config->save();
 
+    // @todo inject. makes links appear on user page because it has perm cache
+    \Drupal::entityTypeManager()->getViewBuilder('block')->resetCache();
     // @todo inject, try to just do setRebuildNeeded.
     // Need to rebuild so that new profile types show up in user tabs.
     \Drupal::getContainer()->get('router.builder')->rebuild();
