@@ -1,5 +1,0 @@
-entity_form:
-  version: VERSION
-  css:
-    theme:
-      css/entity.form.css: {}

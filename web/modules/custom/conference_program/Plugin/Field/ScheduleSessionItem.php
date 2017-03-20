@@ -11,7 +11,7 @@ class ScheduleSessionItem extends EntityReferenceItem {
   public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition) {
     $properties =  parent::propertyDefinitions($field_definition);
 
-    $properties[';value'] = DataDefinition::create('datetime_iso8601')
+    $properties['value'] = DataDefinition::create('datetime_iso8601')
       ->setLabel(t('Date value'))
       ->setRequired(TRUE);
 
