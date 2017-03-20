@@ -4,13 +4,14 @@ Feature: Manage locations
   So I can say where events and sessions are happening
 
   @api
-  Scenario: Add a venue
+  Scenario: A venue can be added
     Given I am logged in as a user with the "administer conference_location" permission
     When I am on "/admin/conference"
     Then I click "Locations"
     And I click "Add location"
 
   @javascript @api
+  Scenario: Add a venue
     Given I am logged in as a user with the "administer conference_location" permission
       And I am on "/location/add"
     Then I fill in "Name" with "University of Testing"

@@ -16,7 +16,6 @@ class LocationListBuilder extends EntityListBuilder {
    */
   public function buildHeader() {
     $header['name'] = t('Name');
-    $header['type'] = t('Type');
     return $header + parent::buildHeader();
   }
 
@@ -28,10 +27,23 @@ class LocationListBuilder extends EntityListBuilder {
         '#type' => 'link',
         '#title' => $entity->label(),
       ] + $entity->toUrl()->toRenderArray();
-    $row['type'] = [
-      '#plain_text' => '@todo',
-    ];
     return $row + parent::buildRow($entity);
   }
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function getEntityIds() {
+    $query = $this->getStorage()->getQuery()
+      ->condition('type', 'venue')
+      ->sort($this->entityType->getKey('id'));
+
+    // Only add the pager if a limit is specified.
+    if ($this->limit) {
+      $query->pager($this->limit);
+    }
+    return $query->execute();
+  }
+
 
 }
