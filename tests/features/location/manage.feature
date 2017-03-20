@@ -25,12 +25,12 @@ Feature: Manage locations
     Then I press "Add new room"
       And I wait for AJAX to finish
     And I fill in "rooms[form][inline_entity_form][name][0][value]" with "Room 1A"
-    And I press "Add room"
+      And I press "Create room"
       And I wait for AJAX to finish
-      Then I press "Add new room"
-    And I wait for AJAX to finish
+    Then I press "Add new room"
+      And I wait for AJAX to finish
     And I fill in "rooms[form][inline_entity_form][name][0][value]" with "Room 1B"
-      And I press "Add room"
+      And I press "Create room"
       And I wait for AJAX to finish
     Then I press "Save"
       And I should see "Save the University of Testing location"
