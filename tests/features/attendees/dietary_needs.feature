@@ -15,7 +15,7 @@ Feature: Configuring the attendee dietary needs field
 
   @api
   Scenario: As an attendee, I can set a bio
-    Given I am logged in as a user with the "verified attendee" permission
+    Given I am logged in as a user with the "authenticated" role
     When I edit my account
     And I click "Preferences"
     And I select "Halal" from "Dietary needs"

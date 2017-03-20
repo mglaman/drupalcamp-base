@@ -6,6 +6,8 @@ Feature: Manage locations
   @api
   Scenario: Add a venue
     Given I am logged in as a user with the "administer conference_location" permission
-    When I am on "/admin/conference"
-      And I click "Locations"
-    And I should see the link "Add location"
+    #When I am on "/admin/conference"
+    #  And I click "Locations"
+    When I am on "/admin/conference/locations"
+      And I should see the link "Add location"
+    Then I click "Add location"
