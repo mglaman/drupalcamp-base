@@ -3,6 +3,7 @@
 namespace Drupal\conference_location\Form;
 
 use Drupal\Core\Entity\ContentEntityForm;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 class LocationForm extends ContentEntityForm {
@@ -38,5 +39,14 @@ class LocationForm extends ContentEntityForm {
 
     return $entity;
   }
+
+  public function save(array $form, FormStateInterface $form_state) {
+    parent::save($form, $form_state);
+    drupal_set_message($this->t('Saved the %label location.', [
+      '%label' => $this->entity->label(),
+    ]));
+    $form_state->setRedirect('entity.conference_location.collection');
+  }
+
 
 }
