@@ -9,6 +9,8 @@ default:
       contexts:
         - FailureContext
         - FeatureContext
+        # Support BigPipe in Behat - https://github.com/jhedstrom/drupalextension/pull/325
+        - BigPipeContext
         - Drupal\DrupalExtension\Context\DrupalContext
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MessageContext
