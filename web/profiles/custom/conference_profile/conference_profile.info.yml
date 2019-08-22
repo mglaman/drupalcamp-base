@@ -46,6 +46,7 @@ dependencies:
   - conference_base
   - conference_attendees
   - conference_location
+  - conference_event
 
 themes:
   - bartik
